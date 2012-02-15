@@ -24,6 +24,6 @@ salt-minion:
     - running
     - enabled: True
     - watch:
-      - /etc/salt/minion
+      - file: /etc/salt/minion
     - require:
       - pkg: salt

@@ -14,6 +14,6 @@ salt-master:
     - running
     - enabled: True
     - watch:
-      - /etc/salt/master
+      - file: /etc/salt/master
     - require:
       - pkg: salt
