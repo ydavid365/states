@@ -23,6 +23,7 @@ salt-minion:
   service:
     - running
     - enabled: True
-    - watch: /etc/salt/minion
+    - watch:
+      - /etc/salt/minion
     - require:
       - pkg: salt

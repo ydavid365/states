@@ -13,6 +13,7 @@ salt-master:
   service:
     - running
     - enabled: True
-    - watch: /etc/salt/master
+    - watch:
+      - /etc/salt/master
     - require:
       - pkg: salt
