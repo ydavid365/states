@@ -4,6 +4,7 @@
     - before: Never
     - after: Optional TrustAll
     - limit: '^SigLevel = '
+    - backup: null
 
 pacman-contrib:
   pkg:
