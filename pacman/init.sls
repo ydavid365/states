@@ -4,3 +4,7 @@
     - before: Never
     - after: Optional TrustAll
     - limit: '^SigLevel = '
+
+pacman-contrib:
+  pkg:
+    - installed
