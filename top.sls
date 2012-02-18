@@ -3,6 +3,6 @@ base:
     - salt
     - pacman
     - pacman.uk
-    - timezone.oslo
+    - nodes
   'sodium.uggedal.com':
-    - salt.master
+    - nodes.sodium.rc

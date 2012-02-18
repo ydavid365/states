@@ -3,10 +3,6 @@
 TODO
 ----
 
-* Handle private data by either creating separate environment for private
-  data and/or possibly use several `source` arguments for private data.
-* Timezone.
-* Hostname.
 * Locale.
 * LTS Xen Kernel.
 * Grub.
