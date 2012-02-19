@@ -3,7 +3,6 @@
 TODO
 ----
 
-* Locale.
 * LTS Xen Kernel.
 * Grub.
 * Fstab.
