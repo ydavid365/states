@@ -13,3 +13,4 @@ base:
     - nodes.sodium.rc
     - zsh
     - development
+    - packaging
