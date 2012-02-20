@@ -8,8 +8,9 @@ include:
     - require:
       - pkg: kernel
 
-mkinitcpio -p linux-lts:
+mkinitcpio:
   cmd:
     - wait
+    - name: mkinitcpio -p linux-lts
     - watch:
       - file: /etc/mkinitcpio.conf

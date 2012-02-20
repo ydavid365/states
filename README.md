@@ -3,7 +3,6 @@
 TODO
 ----
 
-* Grub.
 * Fstab.
 * Bash (inputrc, profile, completion.
 * Ufw.
