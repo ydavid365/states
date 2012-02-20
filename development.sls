@@ -6,3 +6,4 @@ devpkgs:
       - tmux
       - git
       - ack
+      - inotify-tools
