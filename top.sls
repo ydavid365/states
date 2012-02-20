@@ -11,3 +11,4 @@ base:
   'sodium.uggedal.com':
     - salt.master
     - nodes.sodium.rc
+    - zsh
