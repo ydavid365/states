@@ -1,0 +1,8 @@
+devpkgs:
+  pkg:
+    - installed
+    - names:
+      - vim
+      - tmux
+      - git
+      - ack

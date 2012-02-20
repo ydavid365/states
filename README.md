@@ -5,7 +5,6 @@ TODO
 
 * Ufw.
 * Users.
-* Zsh, vim, tmux, git, ack.
 * Nginx.
 * Pacman repo served by nginx.
 
