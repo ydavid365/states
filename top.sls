@@ -12,3 +12,4 @@ base:
     - salt.master
     - nodes.sodium.rc
     - zsh
+    - development
