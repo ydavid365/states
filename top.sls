@@ -1,7 +1,6 @@
 base:
   '*':
     - core
-    - salt
     - pacman.uk
     - kernel.xen
     - grub
