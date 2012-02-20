@@ -7,6 +7,7 @@ base:
     - grub
     - fstab
     - bash
+    - logrotate
   'sodium.uggedal.com':
     - salt.master
     - nodes.sodium.rc

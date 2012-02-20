@@ -4,7 +4,6 @@ TODO
 ----
 
 * Ufw.
-* Logrotate.
 * Users.
 * Zsh, vim, tmux, git, ack.
 * Nginx.
