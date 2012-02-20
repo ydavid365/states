@@ -3,7 +3,6 @@
 TODO
 ----
 
-* LTS Xen Kernel.
 * Grub.
 * Fstab.
 * Bash (inputrc, profile, completion.
