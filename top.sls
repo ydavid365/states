@@ -6,6 +6,7 @@ base:
     - kernel.xen
     - grub
     - fstab
+    - bash
   'sodium.uggedal.com':
     - salt.master
     - nodes.sodium.rc

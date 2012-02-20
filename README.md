@@ -3,7 +3,6 @@
 TODO
 ----
 
-* Bash (inputrc, profile, completion.
 * Ufw.
 * Logrotate.
 * Users.
