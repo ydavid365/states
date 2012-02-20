@@ -3,7 +3,6 @@
 TODO
 ----
 
-* Fstab.
 * Bash (inputrc, profile, completion.
 * Ufw.
 * Logrotate.
