@@ -13,4 +13,5 @@ base:
     - nodes.sodium.rc
     - zsh
     - development
+    - development.python
     - packaging
