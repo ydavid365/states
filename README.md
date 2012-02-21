@@ -15,6 +15,8 @@ TODO
   - Mediaroot handling with favicon alias and possibly no access log.
   - Rewrite missing html extension.
 * Pacman repo served by nginx.
+  - Package singing.
+  - Wrapper script for adding/updating/purging old packages.
 
 [s]: http://saltstack.org
 [u]: http://uggedal.com
