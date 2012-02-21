@@ -12,3 +12,4 @@ base:
     - development
     - development.python
     - packaging
+    - nginx
