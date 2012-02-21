@@ -13,3 +13,4 @@ base:
     - development.python
     - packaging
     - nginx
+    - nodes.sodium.http
