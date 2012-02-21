@@ -16,3 +16,23 @@ nginx:
     - enable: True
     - watch:
       - file: nginx
+
+nginx-cruft:
+  file:
+    - absent
+    - names:
+      - /etc/nginx/html
+      - /etc/nginx/logs
+
+/etc/nginx/conf.d:
+  file:
+    - directory
+    - require:
+      - pkg: nginx
+
+/srv/http:
+  file:
+    - directory
+    - user: root
+    - group: http
+    - mode: 750

@@ -6,9 +6,14 @@ TODO
 * Ufw.
 * Users.
 * Nginx.
-  - Site conf (conf.d/hostname.conf)
   - Extra mime types.
-  - Logrotate
+  - Logrotate.
+  - SSL support.
+  - Aliases.
+  - Upstreams with proxy.
+  - Default vhost (with dererred).
+  - Mediaroot handling with favicon alias and possibly no access log.
+  - Rewrite missing html extension.
 * Pacman repo served by nginx.
 
 [s]: http://saltstack.org

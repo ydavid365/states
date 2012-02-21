@@ -1,0 +1,17 @@
+server {
+  server_name {{ fqdn }};
+  client_max_body_size 10m;
+
+  root {{ root }};
+
+  access_log  /var/log/nginx/{{ fqdn }}.access.log;
+
+  keepalive_timeout 5;
+
+  location / {
+    index  index.html;
+    {% if autoindex %}
+    autoindex on;
+    {% endif %}
+  }
+}
