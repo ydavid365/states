@@ -3,6 +3,7 @@ include:
   - bash
   - pacman
   - logrotate
+  - iptables
 
 inetutils:
   pkg:

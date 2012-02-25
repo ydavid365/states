@@ -14,3 +14,4 @@ base:
     - packaging
     - nginx
     - nodes.sodium.http
+    - nodes.sodium.iptables
