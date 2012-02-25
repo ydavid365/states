@@ -7,7 +7,7 @@
         timezone: 'Europe/Oslo'
         locale: 'en_US.UTF-8'
         hostname: 'localhost'
-        daemons: 'syslog-ng network sshd ntpd crond'
+        daemons: 'syslog-ng network sshd ntpd crond iptables'
 
 /etc/hosts:
   file:
