@@ -23,4 +23,12 @@
 {%- elif accept_upd_ports|length > 1 %}
 -A UDP -p upd -m multiport --dports {{ accept_upd_ports|join(",") }} -j ACCEPT
 {% endif -%}
+{%- for port in limit_tcp_ports %}
+-A TCP -p tcp --dport {{ port }} -m recent --update --name limit-tcp-{{ port}} --hitcount 3 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
+-A TCP -p tcp --dport {{ port }} -m recent --set --name limit-tcp-{{ port}} -j ACCEPT
+{% endfor -%}
+{%- for port in limit_udp_ports %}
+-A UDP -p udp --dport {{ port }} -m recent --update --name limit-udp-{{ port}} --hitcount 3 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
+-A UDP -p udp --dport {{ port }} -m recent --set --name limit-udp-{{ port}} -j ACCEPT
+{% endfor -%}
 COMMIT

@@ -13,8 +13,10 @@ iptables:
     - source: salt://iptables/rules.jinja
     - template: jinja
     - defaults:
-        accept_tcp_ports: [22]
+        accept_tcp_ports: []
+        limit_tcp_ports: [22]
         accept_udp_ports: []
+        limit_udp_ports: []
     - require:
       - pkg: iptables
 
