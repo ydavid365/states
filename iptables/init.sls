@@ -18,8 +18,8 @@ iptables:
     - require:
       - pkg: iptables
 
-#iptables-restore < /etc/iptables/iptables.rules:
-#  cmd:
-#    - wait
-#    - watch:
-#      - file: /etc/iptables/iptables.rules
+iptables-restore < /etc/iptables/iptables.rules:
+  cmd:
+    - wait
+    - watch:
+      - file: /etc/iptables/iptables.rules
