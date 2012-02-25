@@ -1,5 +1,6 @@
 include:
   - salt
+  - rc
   - bash
   - pacman
   - logrotate
