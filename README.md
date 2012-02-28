@@ -11,7 +11,7 @@ TODO
   - Aliases.
   - Upstreams with proxy.
   - Default vhost (with dererred).
-  - Mediaroot handling with favicon alias and possibly no access log.
+  - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
 * Pacman repo served by nginx.
   - Add pkg.uggedal.com to pacman.conf.
