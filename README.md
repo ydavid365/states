@@ -7,7 +7,6 @@ TODO
 
 * Users.
 * Nginx.
-  - Logrotate.
   - SSL support.
   - Aliases.
   - Upstreams with proxy.

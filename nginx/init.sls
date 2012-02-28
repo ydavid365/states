@@ -25,6 +25,13 @@ nginx:
     - require:
       - pkg: nginx
 
+/etc/logrotate.d/nginx:
+  file:
+    - managed
+    - source: salt://nginx/logrotate.conf
+    - require:
+      - pkg: nginx
+
 nginx-cruft:
   file:
     - absent
