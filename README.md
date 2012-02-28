@@ -7,17 +7,17 @@ TODO
 
 * Users.
 * Nginx.
-  - SSL support.
   - Aliases.
   - Upstreams with proxy.
   - Default vhost (with dererred).
   - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
+  - SSL support.
 * Pacman repo served by nginx.
-  - Add pkg.uggedal.com to pacman.conf.
   - Install salt packages from pkg.uggedal.com.
-  - Package singing.
+  - Package signing for pkg.uggedal.com.
   - Wrapper script for adding/updating/purging old packages.
+* Turn on signature checking for all packages if possible.
 
 ### Server
 

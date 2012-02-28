@@ -1,10 +1,7 @@
 /etc/pacman.conf:
   file:
-    - sed
-    - before: Never
-    - after: Optional TrustAll
-    - limit: '^SigLevel = '
-    - backup: null
+    - managed
+    - source: salt://pacman/pacman.conf
 
 pacman-contrib:
   pkg:
