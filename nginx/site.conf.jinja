@@ -8,6 +8,11 @@ server {
 
   keepalive_timeout 5;
 
+  location ~ /(favicon.ico|robots.txt) {
+    access_log off;
+    log_not_found off;
+  }
+
   location / {
     index  index.html;
     {% if autoindex %}
