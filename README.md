@@ -14,7 +14,6 @@ TODO
   - Rewrite missing html extension.
   - SSL support.
 * Pacman repo served by nginx.
-  - Install salt packages from pkg.uggedal.com.
   - Package signing for pkg.uggedal.com.
   - Wrapper script for adding/updating/purging old packages.
 * Turn on signature checking for all packages if possible.
