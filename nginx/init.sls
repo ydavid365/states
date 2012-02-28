@@ -16,6 +16,14 @@ nginx:
     - enable: True
     - watch:
       - file: nginx
+      - file: /etc/nginx/conf/mime.types
+
+/etc/nginx/conf/mime.types:
+  file:
+    - managed
+    - source: salt://nginx/mime.types
+    - require:
+      - pkg: nginx
 
 nginx-cruft:
   file:

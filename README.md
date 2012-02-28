@@ -7,7 +7,6 @@ TODO
 
 * Users.
 * Nginx.
-  - Extra mime types.
   - Logrotate.
   - SSL support.
   - Aliases.
