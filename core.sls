@@ -5,6 +5,7 @@ include:
   - pacman
   - logrotate
   - iptables
+  - ssh
 
 inetutils:
   pkg:
