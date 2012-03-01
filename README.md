@@ -21,6 +21,7 @@ TODO
 ### Server
 
 * SSH
+  - Authorized keys for normal user.
 * Tarsnap
 * Git
 * Postgresql

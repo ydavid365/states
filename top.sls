@@ -15,3 +15,4 @@ base:
     - nginx
     - nodes.sodium.http
     - nodes.sodium.iptables
+    - nodes.sodium.ssh

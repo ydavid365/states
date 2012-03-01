@@ -117,3 +117,7 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #	X11Forwarding no
 #	AllowTcpForwarding no
 #	ForceCommand cvs server
+
+{% if allowed_users %}
+AllowUsers {{ allowed_users|join(" ") }}
+{% endif %}
