@@ -6,13 +6,13 @@ base:
     - grub
     - fstab
   'sodium.uggedal.com':
-    - salt.master
     - nodes.sodium.rc
+    - nodes.sodium.iptables
+    - nodes.sodium.ssh
+    - nodes.sodium.http
+    - salt.master
     - zsh
     - development
     - development.python
     - packaging
     - nginx
-    - nodes.sodium.http
-    - nodes.sodium.iptables
-    - nodes.sodium.ssh
