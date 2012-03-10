@@ -5,6 +5,7 @@ TODO
 
 ### Essential
 
+* Put private data in pillar repo.
 * Users.
 * Nginx.
   - Aliases.
