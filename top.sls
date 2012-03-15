@@ -14,5 +14,6 @@ base:
     - zsh
     - development
     - development.python
+    - development.go
     - packaging
     - nginx
