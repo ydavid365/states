@@ -15,5 +15,6 @@ base:
     - development
     - development.python
     - development.go
+    - development.c
     - packaging
     - nginx
