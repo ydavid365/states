@@ -29,7 +29,7 @@ TODO
 * Git
 * Postgresql
 * Redis
-* Xvfb (or check status of totally headless phantom.js)
+* Phantom.js (headlesss from 1.5)
 * Monit (or alternative)
 * Venv
 * Gunicorn (use /etc/rc.d/gunicorn-name and /etc/gunicorn/name.conf)
