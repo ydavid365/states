@@ -6,7 +6,6 @@ TODO
 ### Essential
 
 * Put private data in pillar repo.
-* Port from extend to `requisite_in` in `nginx/site.sls`.
 * Users.
 * Nginx.
   - Possibly use glob matching for site watch directly in nginx state.

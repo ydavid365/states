@@ -13,10 +13,6 @@ include:
         autoindex: {{ autoindex }}
     - require:
       - file: /etc/nginx/conf.d
-
-extend:
-  nginx:
-    service:
-      - watch:
-        - file: /etc/nginx/conf.d/{{ fqdn }}.conf
+    - watch_in:
+      - service: nginx
 {% endmacro %}
