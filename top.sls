@@ -6,7 +6,6 @@ base:
     - grub
     - fstab
   'sodium.uggedal.com':
-    - nodes.sodium.rc
     - nodes.sodium.iptables
     - nodes.sodium.ssh
     - nodes.sodium.http

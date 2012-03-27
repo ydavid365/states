@@ -8,6 +8,8 @@
         locale: 'en_US.UTF-8'
         hostname: 'localhost'
         daemons: 'syslog-ng network sshd ntpd crond iptables'
+    - context:
+        daemons: {{ pillar['daemons'] }}
 
 /etc/hosts:
   file:
