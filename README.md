@@ -5,7 +5,14 @@ TODO
 
 ### Essential
 
-* Users.
+* Pacman repo served by nginx.
+  - Package signing for pkg.uggedal.com.
+  - Wrapper script for adding/updating/purging old packages.
+* Turn on signature checking for all packages if possible.
+
+
+### Server
+
 * Nginx.
   - Possibly use glob matching for site watch directly in nginx state.
   - Aliases.
@@ -14,24 +21,17 @@ TODO
   - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
   - SSL support.
-* Pacman repo served by nginx.
-  - Package signing for pkg.uggedal.com.
-  - Wrapper script for adding/updating/purging old packages.
-* Turn on signature checking for all packages if possible.
-
-### Server
-
 * SSH
   - Authorized keys for normal user.
 * Tarsnap
 * Git
-* Postgresql
 * Redis
+* Postgresql
 * Phantom.js (headlesss from 1.5)
 * Monit (or alternative)
 * Venv
 * Gunicorn (use /etc/rc.d/gunicorn-name and /etc/gunicorn/name.conf)
-* Taskwarrior (or abandon for git repo with notes)
+
 
 ### Desktop
 
@@ -43,6 +43,7 @@ TODO
 * Mplayer
 * Spotify
 * Urxvt (or suckless alternative)
+
 
 [s]: http://saltstack.org
 [u]: http://uggedal.com
