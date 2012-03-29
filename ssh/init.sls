@@ -16,3 +16,7 @@ sshd:
     - template: jinja
     - defaults:
         allowed_users: []
+{% if pillar['allowed_users'] %}
+    - context:
+        allowed_users: {{ pillar['allowed_users'] }}
+{% endif %}

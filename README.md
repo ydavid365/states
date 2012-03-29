@@ -5,7 +5,6 @@ TODO
 
 ### Essential
 
-* Put private data in pillar repo.
 * Users.
 * Nginx.
   - Possibly use glob matching for site watch directly in nginx state.

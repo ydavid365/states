@@ -6,7 +6,6 @@ base:
     - grub
     - fstab
   'sodium.uggedal.com':
-    - nodes.sodium.ssh
     - nodes.sodium.http
     - salt.master
     - zsh
