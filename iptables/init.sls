@@ -17,6 +17,10 @@ iptables:
         limit_tcp_ports: [22]
         accept_udp_ports: []
         limit_udp_ports: []
+{% if pillar['accept_tcp_ports'] %}
+    - context:
+        accept_tcp_ports: {{ pillar['accept_tcp_ports'] }}
+{% endif %}
     - require:
       - pkg: iptables
 
