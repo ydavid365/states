@@ -5,6 +5,7 @@ base:
     - kernel.xen
     - grub
     - fstab
+    - users
   'sodium.uggedal.com':
     - nodes.sodium.http
     - salt.master
