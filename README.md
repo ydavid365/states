@@ -21,8 +21,6 @@ TODO
   - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
   - SSL support.
-* SSH
-  - Authorized keys for normal user.
 * Tarsnap
 * Git
 * Redis
