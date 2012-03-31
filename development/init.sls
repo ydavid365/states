@@ -7,3 +7,4 @@ devpkgs:
       - git
       - ack
       - inotify-tools
+      - cloc
