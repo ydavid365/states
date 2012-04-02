@@ -12,6 +12,7 @@ base:
     - zsh
     - development
     - development.python
+    - development.ruby
     - development.go
     - development.c
     - packaging
