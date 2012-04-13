@@ -38,7 +38,7 @@ color light-blue/black light-cyan/blue
 # (0) Arch Linux
 title  Arch Linux  [/boot/vmlinuz-linux-lts]
 root   (hd0)
-kernel /boot/vmlinuz-linux-lts root=/dev/xvda ro 
+kernel /boot/vmlinuz-linux-lts root=/dev/xvda ro ipv6.disable=1
 initrd /boot/initramfs-linux-lts.img
 
 # (1) Windows
