@@ -8,3 +8,4 @@ devpkgs:
       - ack
       - inotify-tools
       - cloc
+      - python2-pygments
