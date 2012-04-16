@@ -13,6 +13,7 @@ base:
     - development
     - development.python
     - development.ruby
+    - development.js
     - development.go
     - development.c
     - packaging
