@@ -7,9 +7,12 @@ include:
   - iptables
   - ssh
 
-inetutils:
+corepkgs:
   pkg:
     - installed
+    - names:
+      - inetutils
+      - htop
 
 unneededpkgs:
   pkg:
