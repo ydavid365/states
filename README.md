@@ -40,7 +40,7 @@ TODO
 * Spectrwm or DWM with dmenu.
 * Mplayer
 * Spotify
-* Urxvt (or suckless alternative)
+* Urxvt or st.
 
 
 [s]: http://saltstack.org
