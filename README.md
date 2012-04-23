@@ -37,7 +37,7 @@ TODO
 * Wireless
 * Xorg
 * Nvidia
-* Spectrwm or DWM with dmenu.
+* Spectrwm, monsterwm or DWM with dmenu.
 * Mplayer
 * Spotify
 * Urxvt or st.
