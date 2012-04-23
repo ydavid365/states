@@ -41,6 +41,9 @@ TODO
 * Mplayer
 * Spotify
 * Urxvt or st.
+* Sxiv
+* Mupdf
+* Unclutter
 
 
 [s]: http://saltstack.org
