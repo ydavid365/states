@@ -10,6 +10,7 @@ base:
     - nodes.sodium.http
     - salt.master
     - zsh
+    - sic
     - development
     - development.python
     - development.ruby
