@@ -15,8 +15,6 @@ redis:
     - watch:
       - file: redis
 
-/etc/sysctl.conf:
-  file.append:
-    - text: |
-        # More optimistic malloc for Redis forks
-        vm.overcommit_memory = 1
+/etc/sysctl.d/redis.conf:
+  file.managed:
+    - source: salt://redis/sysctl.conf
