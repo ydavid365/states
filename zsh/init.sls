@@ -1,3 +1,2 @@
 zsh:
-  pkg:
-    - installed
+  pkg.installed

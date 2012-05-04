@@ -1,6 +1,5 @@
 devpkgs:
-  pkg:
-    - installed
+  pkg.installed:
     - names:
       - vim
       - tmux

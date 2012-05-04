@@ -1,15 +1,12 @@
 iptables:
-  pkg:
-    - installed
-  service:
-    - running
+  pkg.installed
+  service.running:
     - enabled: True
     - require:
       - pkg: iptables
 
 /etc/iptables/iptables.rules:
-  file:
-    - managed
+  file.managed:
     - source: salt://iptables/rules.jinja
     - template: jinja
     - defaults:
@@ -25,7 +22,6 @@ iptables:
       - pkg: iptables
 
 iptables-restore < /etc/iptables/iptables.rules:
-  cmd:
-    - wait
+  cmd.wait:
     - watch:
       - file: /etc/iptables/iptables.rules

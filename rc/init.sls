@@ -1,6 +1,5 @@
 /etc/rc.conf:
-  file:
-    - managed
+  file.managed:
     - source: salt://rc/rc.conf.jinja
     - template: jinja
     - defaults:
@@ -12,8 +11,7 @@
         daemons: {{ pillar['daemons'] }}
 
 /etc/hosts:
-  file:
-    - managed
+  file.managed:
     - source: salt://rc/hosts.jinja
     - template: jinja
     - defaults:
@@ -21,8 +19,7 @@
         fqdn: 'localhost.localdomain'
 
 /etc/locale.gen:
-  file:
-    - managed
+  file.managed:
     - source: salt://rc/locale.gen.jinja
     - template: jinja
     - defaults:
@@ -30,7 +27,6 @@
           - 'en_US.UTF-8 UTF-8'
 
 locale-gen:
-  cmd:
-    - wait
+  cmd.wait:
     - watch:
       - file: /etc/locale.gen

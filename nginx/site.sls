@@ -3,8 +3,7 @@ include:
   - nginx
 
 /etc/nginx/conf.d/{{ fqdn }}.conf:
-  file:
-    - managed
+  file.managed:
     - source: salt://nginx/site.conf.jinja
     - template: jinja
     - defaults:

@@ -1,6 +1,5 @@
 base-devel:
-  pkg:
-    - installed
+  pkg.installed:
     - names:
       - autoconf
       - automake

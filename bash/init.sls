@@ -1,13 +1,10 @@
 /etc/profile:
-  file:
-    - managed
+  file.managed:
     - source: salt://bash/profile
 
 /etc/inputrc:
-  file:
-    - managed
+  file.managed:
     - source: salt://bash/inputrc
 
 bash-completion:
-  pkg:
-    - installed
+  pkg.installed

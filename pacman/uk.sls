@@ -1,4 +1,3 @@
 /etc/pacman.d/mirrorlist:
-  file:
-    - managed
+  file.managed:
     - source: salt://pacman/mirrorlist.uk

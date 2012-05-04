@@ -1,6 +1,5 @@
 cdevpkgs:
-  pkg:
-    - installed
+  pkg.installed:
     - names:
       - valgrind
       - cdecl

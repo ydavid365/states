@@ -8,15 +8,13 @@ include:
   - ssh
 
 corepkgs:
-  pkg:
-    - installed
+  pkg.installed:
     - names:
       - inetutils
       - htop
 
 unneededpkgs:
-  pkg:
-    - purged
+  pkg.purged:
     - names:
       - jfsutils
       - nano

@@ -1,4 +1,3 @@
 kernel:
-  pkg:
-    - installed
+  pkg.installed:
     - name: linux-lts

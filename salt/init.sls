@@ -1,10 +1,8 @@
 salt:
-  pkg:
-    - installed
+  pkg.installed
 
 salt-config-templates:
-  file:
-    - absent
+  file.absent:
     - names:
       - /etc/salt/master.template
       - /etc/salt/minion.template
@@ -12,16 +10,14 @@ salt-config-templates:
       - pkg: salt
 
 /etc/salt/minion:
-  file:
-    - managed
+  file.managed:
     - mode: 640
     - source: salt://salt/minion.config
     - require:
       - pkg: salt
 
 salt-minion:
-  service:
-    - running
+  service.running:
     - enabled: True
     - watch:
       - file: /etc/salt/minion

@@ -1,4 +1,3 @@
 /etc/logrotate.conf:
-  file:
-    - managed
+  file.managed:
     - source: salt://logrotate/logrotate.conf

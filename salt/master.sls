@@ -2,16 +2,14 @@ include:
   - salt
 
 /etc/salt/master:
-  file:
-    - managed
+  file.managed:
     - mode: 640
     - source: salt://salt/master.config
     - require:
       - pkg: salt
 
 salt-master:
-  service:
-    - running
+  service.running:
     - enabled: True
     - watch:
       - file: /etc/salt/master

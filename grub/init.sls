@@ -1,12 +1,10 @@
 grub:
-  pkg:
-    - installed
+  pkg.installed:
     - require:
       - cmd: mkinitcpio
 
 /boot/grub/menu.lst:
-  file:
-    - managed
+  file.managed:
     - source: salt://grub/menu.lst
     - require:
       - pkg: grub

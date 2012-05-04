@@ -1,3 +1,2 @@
 sic:
-  pkg:
-    - installed
+  pkg.installed
