@@ -11,9 +11,6 @@ base:
     - salt.master
     - zsh
     - sic
-    - development
-    - development.python
-    - development.ruby
-    - development.c
+    - development*
     - packaging
     - nginx
