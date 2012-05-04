@@ -12,6 +12,4 @@ include:
         autoindex: {{ autoindex }}
     - require:
       - file: /etc/nginx/conf.d
-    - watch_in:
-      - service: nginx
 {% endmacro %}

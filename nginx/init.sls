@@ -15,6 +15,7 @@ nginx:
     - watch:
       - file: nginx
       - file: /etc/nginx/conf/mime.types
+      - file: /etc/nginx/conf.d/*.conf
 
 /etc/nginx/conf/mime.types:
   file.managed:
