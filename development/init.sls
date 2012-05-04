@@ -4,6 +4,7 @@ devpkgs:
       - vim
       - tmux
       - git
+      - mercurial
       - ack
       - inotify-tools
       - cloc
