@@ -14,3 +14,4 @@ base:
     - development*
     - packaging
     - nginx
+    - redis

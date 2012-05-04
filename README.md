@@ -24,6 +24,8 @@ TODO
 * Tarsnap
 * Git
 * Redis
+  - Replication.
+  - Password.
 * Postgresql
 * Phantom.js (headlesss from 1.5)
 * Monit (or alternative)
