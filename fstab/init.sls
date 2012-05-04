@@ -1,2 +1,2 @@
 /etc/fstab:
-  file.managed:
+  file.managed

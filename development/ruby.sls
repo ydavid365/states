@@ -1,2 +1,2 @@
 ruby:
-  pkg.installed:
+  pkg.installed

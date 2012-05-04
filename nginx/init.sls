@@ -1,5 +1,6 @@
 nginx:
-  pkg.installed
+  pkg:
+    - installed
   file.managed:
     - name: /etc/nginx/conf/nginx.conf
     - source: salt://nginx/nginx.conf.jinja

@@ -1,5 +1,6 @@
 iptables:
-  pkg.installed
+  pkg:
+    - installed
   service.running:
     - enabled: True
     - require:
