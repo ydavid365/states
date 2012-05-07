@@ -27,6 +27,9 @@ TODO
   - Replication.
   - Password.
 * Postgresql
+  - Users.
+  - Databases.
+  - Authentication.
 * Phantom.js (headlesss from 1.5)
 * Monit (or alternative)
 * Venv

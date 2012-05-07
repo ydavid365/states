@@ -15,3 +15,4 @@ base:
     - packaging
     - nginx
     - redis
+    - postgresql
