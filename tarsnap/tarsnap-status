@@ -5,6 +5,8 @@ set -e
 PREFIX="$(hostname)_"
 NAMES="$(tarsnap --list-archives | sort -nr)"
 NUM_ARCHIVES=$(echo "$NAMES" | wc -l)
+SIZE=$(tarsnap --print-stats --humanize-numbers \
+       | tail -n 1 | tr -s ' ' | cut -d ' ' -f 6,7)
 
 FIRST_STAMP=$(echo "$NAMES" | tail -n 1)
 LAST_STAMP=$(echo "$NAMES" | head -n 1)
@@ -15,6 +17,7 @@ print_stamp() {
 }
 
 echo "Archives: $NUM_ARCHIVES"
+echo "Size:     $SIZE"
 echo -n "From:     "
 print_stamp $FIRST_STAMP
 echo -n "To:       "
