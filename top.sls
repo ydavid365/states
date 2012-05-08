@@ -17,5 +17,6 @@ base:
     - nginx
     - redis
     - postgresql
+    - postgresql.python
     - postgresql.databases
     - phantomjs
