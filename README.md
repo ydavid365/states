@@ -23,9 +23,6 @@ TODO
   - SSL support.
 * Tarsnap
 * Git
-* Redis
-  - Replication.
-  - Password.
 * Monit (or alternative)
 * Venv
 * Gunicorn (use /etc/rc.d/gunicorn-name and /etc/gunicorn/name.conf)
