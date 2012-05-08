@@ -33,3 +33,8 @@ include:
     - minute: 40
     - require:
       - file: /usr/local/bin/tarsnap-prune
+
+/usr/local/bin/tarsnap-status:
+  file.managed:
+    - source: salt://tarsnap/tarsnap-status
+    - mode: 755

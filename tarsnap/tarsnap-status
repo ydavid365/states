@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+PREFIX="$(hostname)_"
+NAMES="$(tarsnap --list-archives | sort -nr)"
+NUM_ARCHIVES=$(echo "$NAMES" | wc -l)
+
+FIRST_STAMP=$(echo "$NAMES" | tail -n 1)
+LAST_STAMP=$(echo "$NAMES" | head -n 1)
+
+print_stamp() {
+  stamp=${1#$PREFIX}
+  echo $(date -d @$stamp +'%F %R')
+}
+
+echo "Archives: $NUM_ARCHIVES"
+echo -n "From:     "
+print_stamp $FIRST_STAMP
+echo -n "To:       "
+print_stamp $LAST_STAMP
+printf "%26s\n" | tr ' ' '-'
+
+for name in ${NAMES}; do
+  print_stamp $name
+done
