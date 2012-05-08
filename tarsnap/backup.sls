@@ -15,6 +15,8 @@ include:
   file.managed:
     - source: salt://tarsnap/tarsnap-backup
     - mode: 755
+    - require:
+      - file: /etc/tarsnap/backup.conf
   cron.present:
     - minute: 10
     - require:
@@ -24,6 +26,8 @@ include:
   file.managed:
     - source: salt://tarsnap/tarsnap-prune
     - mode: 755
+    - require:
+      - cron: /usr/local/bin/tarsnap-backup
   cron.present:
     - hour: 6
     - minute: 40
