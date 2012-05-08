@@ -13,6 +13,7 @@ base:
     - sic
     - development*
     - packaging
+    - tarsnap
     - nginx
     - redis
     - postgresql
