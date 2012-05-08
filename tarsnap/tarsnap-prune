@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# Prunes tarsnap backups, keeping:
+#   * all created this day
+#   * one per day for those created this month
+#   * one per month for those created more than one month ago
+
+set -e
+
+PREFIX="$(hostname)_"
+NAMES="$(tarsnap --list-archives | sort -nr)"
+NOW="$(date -u +%s)"
+
+ONE_DAY=$((60*60*24))
+ONE_MONTH=$(($ONE_DAY*30))
+
+declare -A DAY_INDEX
+declare -A MONTH_INDEX
+
+prune() {
+  tarsnap -d -f "$1" > /dev/null 2>&1
+}
+
+for name in ${NAMES}; do
+  stamp=${name#$PREFIX}
+  diff=$(($NOW - $stamp))
+
+  if [ $diff -lt $ONE_DAY ]; then
+    :
+
+  elif [ $diff -lt $ONE_MONTH ]; then
+    days_ago=$(($diff / ONE_DAY))
+
+    if [[ ${DAY_INDEX[$days_ago]} ]]; then
+      prune $name
+    else
+      DAY_INDEX[$days_ago]=1
+    fi
+
+  else
+    months_ago=$(($diff / ONE_MONTH))
+
+    if [[ ${MONTH_INDEX[$months_ago]} ]]; then
+      prune $name
+    else
+      MONTH_INDEX[$months_ago]=1
+    fi
+  fi
+done

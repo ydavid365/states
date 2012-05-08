@@ -21,9 +21,6 @@ TODO
   - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
   - SSL support.
-* Tarsnap
-  - Backup script.
-  - Pruning.
 * Git
 * Monit (or alternative)
 * Venv

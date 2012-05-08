@@ -1,0 +1,11 @@
+CMDS=(
+{% for cmd in cmds %}
+  "{{ cmd }}"
+{% endfor %}
+)
+
+PATHS=(
+{% for path in paths %}
+  {{ path }}
+{% endfor %}
+)

@@ -14,6 +14,7 @@ base:
     - development*
     - packaging
     - tarsnap
+    - tarsnap.backup
     - nginx
     - redis
     - postgresql
