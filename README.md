@@ -22,6 +22,7 @@ TODO
   - Rewrite missing html extension.
   - SSL support.
 * Git
+  - Password protected cgit instanced served through fcgiwrap.
 * Monit (or alternative)
 * Venv
 * Gunicorn (use /etc/rc.d/gunicorn-name and /etc/gunicorn/name.conf)
