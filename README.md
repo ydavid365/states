@@ -25,7 +25,9 @@ TODO
   - Password protected cgit instance served through fcgiwrap.
 * Going.
 * Venv.
-* Gunicorn (use /etc/rc.d/gunicorn-name and /etc/gunicorn/name.conf).
+* Gunicorn:
+  - Config templating/macro (/etc/gunicorn/name.conf).
+  - Init script (/etc/rc.d/gunicorn-name) or going.
 
 
 ### Desktop
