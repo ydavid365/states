@@ -5,25 +5,32 @@ set -e
 PREFIX="$(hostname)_"
 NAMES="$(tarsnap --list-archives | sort -nr)"
 NUM_ARCHIVES=$(echo "$NAMES" | wc -l)
-SIZE=$(tarsnap --print-stats --humanize-numbers \
-       | tail -n 1 | tr -s ' ' | cut -d ' ' -f 6,7)
+SIZES=$(tarsnap --print-stats --humanize-numbers | grep -oE '[0-9.]+ [a-zA-Z]{2}')
 
 FIRST_STAMP=$(echo "$NAMES" | tail -n 1)
 LAST_STAMP=$(echo "$NAMES" | head -n 1)
+
+print_stat() {
+  printf "%-30s%20s\n" "$1:" "$2"
+}
 
 print_stamp() {
   stamp=${1#$PREFIX}
   echo $(date -d @$stamp +'%F %R')
 }
 
-echo "Archives: $NUM_ARCHIVES"
-echo "Size:     $SIZE"
-echo -n "From:     "
-print_stamp $FIRST_STAMP
-echo -n "To:       "
-print_stamp $LAST_STAMP
-printf "%26s\n" | tr ' ' '-'
+print_stat "Number of archives" "$NUM_ARCHIVES"
+print_stat "Uncompressed total" "$(echo "$SIZES" | sed -n 1p)"
+print_stat "Uncompressed deduped" "$(echo "$SIZES" | sed -n 2p)"
+print_stat "Compressed total" "$(echo "$SIZES" | sed -n 3p)"
+print_stat "Compressed deduped" "$(echo "$SIZES" | sed -n 4p)"
+print_stat "From" "$(print_stamp $FIRST_STAMP)"
+print_stat "To" "$(print_stamp $LAST_STAMP)"
+printf "%50s\n" | tr ' ' '-'
 
+
+num_len=${#NUM_ARCHIVES}
+i=$NUM_ARCHIVES
 for name in ${NAMES}; do
-  print_stamp $name
+  printf "%${num_len}s.%$((49-$num_len))s\n" "$((i--))" "$(print_stamp $name)"
 done
