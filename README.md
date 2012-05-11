@@ -23,11 +23,11 @@ TODO
   - SSL support.
 * Git:
   - Password protected cgit instance served through fcgiwrap.
-* Going.
 * Venv.
 * Gunicorn:
   - Config templating/macro (/etc/gunicorn/name.conf).
   - Init script (/etc/rc.d/gunicorn-name) or going.
+  - Unprivileged user.
 
 
 ### Desktop

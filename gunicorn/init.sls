@@ -5,3 +5,8 @@ gunicorn:
 
 python2-setproctitle:
   pkg.installed
+
+/etc/gunicorn.d:
+  file.directory:
+    - require:
+      - pkg: gunicorn
