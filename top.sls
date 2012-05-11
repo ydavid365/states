@@ -16,6 +16,7 @@ base:
     - tarsnap
     - tarsnap.backup
     - nginx
+    - going
     - gunicorn
     - redis
     - postgresql
