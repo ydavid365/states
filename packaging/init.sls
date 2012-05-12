@@ -13,3 +13,10 @@ base-devel:
       - make
       - patch
       - pkg-config
+
+/etc/makepkg.conf:
+  file.managed:
+    - source: salt://packaging/makepkg.conf.jinja
+    - template: jinja
+    - defaults:
+        packager: "Eivind Uggedal <eivind@uggedal.com>"
