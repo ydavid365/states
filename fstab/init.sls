@@ -1,2 +1,3 @@
 /etc/fstab:
-  file.managed
+  file.managed:
+    - source: salt://fstab/fstab
