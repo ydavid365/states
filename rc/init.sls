@@ -15,8 +15,8 @@
     - source: salt://rc/hosts.jinja
     - template: jinja
     - defaults:
-        hostname: 'localhost'
-        fqdn: 'localhost.localdomain'
+        hostname: {{ grains['host'] }}
+        fqdn: {{ grains['fqdn'] }}
 
 /etc/locale.gen:
   file.managed:
