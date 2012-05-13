@@ -7,7 +7,6 @@ base:
     - fstab
     - users
   'sodium.uggedal.com':
-    - nodes.sodium.http
     - salt.master
     - zsh
     - sic
@@ -16,8 +15,8 @@ base:
     - tarsnap
     - tarsnap.backup
     - nginx
+    - nginx.sites
     - going
-    - going.children
     - gunicorn
     - redis
     - postgresql
