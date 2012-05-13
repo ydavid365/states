@@ -7,8 +7,10 @@
         locale: 'en_US.UTF-8'
         hostname: 'localhost'
         daemons: 'syslog-ng network sshd ntpd crond iptables'
+{% if pillar['daemons'] %}
     - context:
         daemons: {{ pillar['daemons'] }}
+{% endif %}
 
 /etc/hosts:
   file.managed:
