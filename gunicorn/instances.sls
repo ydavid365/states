@@ -39,7 +39,4 @@
                " " ~ instance.module,
                cwd=src) }}
 
-# TODO: Handle require against gunicorn config for going_child.
-# TODO: Nginx proxy setup.
-
 {% endfor %}
