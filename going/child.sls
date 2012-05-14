@@ -1,16 +1,17 @@
+{% macro going_child(name, cmd, cwd=None)  %}
 include:
   - going
 
-{% for name, cmd in pillar['going_children'] %}
 /etc/going.d/{{ name }}:
   file.managed:
     - source: salt://going/child.conf.jinja
     - template: jinja
     - defaults:
         cmd: {{ cmd }}
+        cwd: {{ cwd }}
     - require:
       - pkg: going
-{% endfor %}
+{% endmacro %}
 
 # TODO: Send going SIGHUP when files are added. Need:
 #       - controll interface to find PID, or
