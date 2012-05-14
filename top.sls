@@ -18,6 +18,7 @@ base:
     - nginx.sites
     - going
     - gunicorn
+    - gunicorn.instances
     - redis
     - postgresql
     - postgresql.python

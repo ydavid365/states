@@ -28,6 +28,7 @@ TODO
   - Config templating/macro (/etc/gunicorn/name.conf).
   - Init script (/etc/rc.d/gunicorn-name) or going.
   - Unprivileged user.
+  - Logging (with rotation sending SIGHUP to reopen files).
 
 
 ### Desktop
