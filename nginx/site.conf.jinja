@@ -1,3 +1,11 @@
+{% if aliases %}
+server {
+  listen 80;
+  server_name {{ aliases|join(" ") }};
+  rewrite ^ http://{{ fqdn }}$request_uri? permanent;
+}
+{% endif %}
+
 {%- set upstream_name = fqdn|replace(".", "-") ~ "-backend" %}
 {%- if upstreams %}
 upstream {{ upstream_name }} {

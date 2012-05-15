@@ -7,10 +7,9 @@
 {% set socket = "/var/run/gunicorn/" ~ instance.name  ~ ".sock" %}
 {% set log = "/var/log/gunicorn/" ~ instance.name  ~ ".log" %}
 
+{% set gunicorn = "gunicorn" %}
 {% if instance.django %}
-  {% set gunicorn = "gunicorn_django" %}
-{% else %}
-  {% set gunicorn = "gunicorn" %}
+  {% set gunicorn = gunicorn ~ "_django" %}
 {% endif %}
 
 {{ venv }}:

@@ -12,7 +12,6 @@ Server
 ------
 
 * Nginx:
-  - Aliases.
   - Default vhost (with dererred).
   - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
