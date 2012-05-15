@@ -13,7 +13,6 @@ Server
 
 * Nginx:
   - Default vhost (with dererred).
-  - Mediaroot handling with favicon alias.
   - Rewrite missing html extension.
   - SSL support.
 * Git:

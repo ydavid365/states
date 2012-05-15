@@ -30,6 +30,13 @@ server {
     log_not_found off;
   }
 
+  {%- if static_prefix %}
+  location {{ static_prefix }} {
+    expires max;
+    access_log off;
+  }
+  {%- endif %}
+
   location / {
     {%- if upstreams %}
     try_files $uri @{{ upstream_name }};

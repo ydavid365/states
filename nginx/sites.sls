@@ -10,6 +10,7 @@ include:
         fqdn: {{ site.fqdn }}
         root: {{ site.root }}
         autoindex: {{ site.autoindex or False }}
+        static_prefix: {{ site.static_prefix or False }}
         aliases: {{ site.aliases or [] }}
         upstreams: {{ site.upstreams or [] }}
     - require:
