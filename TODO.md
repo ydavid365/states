@@ -11,6 +11,9 @@ Essential
 Server
 ------
 
+* Salt:
+  - Open firewall.
+  - Restrict access to known IP-addresses.
 * Nginx:
   - Default vhost (with dererred).
   - Rewrite missing html extension.
@@ -23,6 +26,35 @@ Server
   - Init script (/etc/rc.d/gunicorn-name) or going.
   - Unprivileged user.
   - Logging (with rotation sending SIGHUP to reopen files).
+
+
+Deploy (MQ)
+-----------
+
+* Makefile or bash script using `salt`, `salt-cp`, and/or custom modules
+  in `_modules`.
+  - What about access to salt? Run as root?
+
+* Compile assets.
+* Copy static assets dir to /srv/http/name.
+  - Move favicon.ico in place if needed.
+  - Use http user and group.
+* Copy source excluding static dir to /usr/local/src/name.
+  - Use gunicorn user and group.
+* Reload gunicorn.
+  - Need to get pid, either from extension of going or by
+    running gunicorns with a pid file.
+* Ping check.
+* Cleanup compiled assets.
+
+* New server.
+* Setup backup of redis data and shots.
+* Test CDN.
+* Transfer shots and data.
+* Either set original server as read-only or replay commands afterwards.
+* Change DNS.
+* Take down nginx, gunicorn, monit.
+* Remove backup settings for MQ data.
 
 
 Desktop
