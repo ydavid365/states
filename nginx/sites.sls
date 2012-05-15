@@ -10,6 +10,7 @@ include:
         fqdn: {{ site.fqdn }}
         root: {{ site.root }}
         autoindex: {{ site.autoindex or False }}
+        upstreams: {{ site.upstreams or [] }}
     - require:
       - file: /etc/nginx/conf.d
 {% endfor %}
