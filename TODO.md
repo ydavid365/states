@@ -34,20 +34,24 @@ Deploy (MQ)
 * Makefile or bash script using `salt`, `salt-cp`, and/or custom modules
   in `_modules`.
   - What about access to salt? Run as root?
-
-* Compile assets.
-* Copy static assets dir to /srv/http/name.
-  - Move favicon.ico in place if needed.
-  - Use http user and group.
-* Copy source excluding static dir to /usr/local/src/name.
-  - Use gunicorn user and group.
-* Reload gunicorn.
-  - Need to get pid, either from extension of going or by
-    running gunicorns with a pid file.
-* Ping check.
-* Cleanup compiled assets.
+  - Reload gunicorn.
+    - Need to get pid, either from extension of going or by
+      running gunicorns with a pid file.
+  - Ping check.
+* Using native packages for getting src and http content in place.
+  - Need private pacman repo.
+    - Possibly limit access to port 80 by IP.
+    - Possibly add net.ipv4.conf.all.rp_filter = 1.
+  - Compile assets.
+  - Copy static assets dir to $PREFIX/srv/http/name.
+    - Move favicon.ico in place.
+    - Use http user and group.
+  - Copy source excluding static dir to /usr/local/src/name.
+    - Use gunicorn user and group.
+  - Cleanup compiled assets.
 
 * New server.
+  - Basic, no zsh etc.
 * Setup backup of redis data and shots.
 * Test CDN.
 * Transfer shots and data.
