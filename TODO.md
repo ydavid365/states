@@ -39,7 +39,7 @@ Deploy (MQ)
       running gunicorns with a pid file.
   - Ping check.
 * Using native packages for getting src and http content in place.
-  - Need private pacman repo.
+  - Need seperate private pacman repo or make current private.
     - Possibly limit access to port 80 by IP.
     - Possibly add net.ipv4.conf.all.rp_filter = 1.
   - Compile assets.
