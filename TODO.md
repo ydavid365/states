@@ -34,17 +34,17 @@ Deploy (MQ)
 * Makefile or bash script using `salt`, `salt-cp`, and/or custom modules
   in `_modules`.
   - What about access to salt? Run as root?
+  - Update native package.
   - Reload gunicorn.
     - Need to get pid, either from extension of going or by
       running gunicorns with a pid file.
   - Ping check.
 * Using native packages for getting src and http content in place.
-  - Need seperate private pacman repo or make current private.
-    - Possibly limit access to port 80 by IP.
+  - Private pacman repo.
     - Possibly add net.ipv4.conf.all.rp_filter = 1.
-    - Remove sensitive config from package.
-      - Use env variables set in place with salt or settings file templated
-        by salt.
+  - Remove sensitive config from package.
+    - Use env variables set in place with salt or settings file templated
+      by salt.
   - Compile assets.
   - Copy static assets dir to $PREFIX/srv/http/name.
     - Move favicon.ico in place.
