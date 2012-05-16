@@ -11,10 +11,8 @@ iptables:
     - source: salt://iptables/rules.jinja
     - template: jinja
     - defaults:
-        accept_tcp_ports: []
+        accept_tcp: []
         limit_tcp_ports: [22]
-        accept_udp_ports: []
-        limit_udp_ports: []
 {% if pillar['accept_tcp_ports'] %}
     - context:
         accept_tcp_ports: {{ pillar['accept_tcp_ports'] }}
