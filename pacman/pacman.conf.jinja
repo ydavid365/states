@@ -110,5 +110,7 @@ Include = /etc/pacman.d/mirrorlist
 #SigLevel = Optional TrustAll
 #Server = file:///home/custompkgs
 
-[uggedal]
-Server = http://pkg.uggedal.com/$arch
+{% for repo in extra_repos %}
+[{{ repo.name }}]
+Server = {{ repo.url }}/$arch
+{% endfor %}
