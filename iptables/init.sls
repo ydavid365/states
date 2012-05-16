@@ -10,13 +10,10 @@ iptables:
   file.managed:
     - source: salt://iptables/rules.jinja
     - template: jinja
-    - defaults:
-        accept_tcp: []
-        limit_tcp_ports: [22]
-{% if pillar['accept_tcp_ports'] %}
     - context:
-        accept_tcp_ports: {{ pillar['accept_tcp_ports'] }}
-{% endif %}
+        accept_tcp_ports: {{ pillar.accept_tcp_ports or [] }}
+        accept_tcp_from: {{ pillar.accept_tcp_from or [] }}
+        limit_tcp_ports: {{ pillar.limit_tcp_ports or [22] }}
     - require:
       - pkg: iptables
 

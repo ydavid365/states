@@ -42,6 +42,9 @@ Deploy (MQ)
   - Need seperate private pacman repo or make current private.
     - Possibly limit access to port 80 by IP.
     - Possibly add net.ipv4.conf.all.rp_filter = 1.
+    - Remove sensitive config from package.
+      - Use env variables set in place with salt or settings file templated
+        by salt.
   - Compile assets.
   - Copy static assets dir to $PREFIX/srv/http/name.
     - Move favicon.ico in place.
