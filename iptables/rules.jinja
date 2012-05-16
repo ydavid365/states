@@ -13,14 +13,10 @@
 -A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
 -A INPUT -p tcp -j REJECT --reject-with tcp-rst
 -A INPUT -j REJECT --reject-with icmp-proto-unreachable
-{%- if accept_tcp_ports|length == 1 %}
--A TCP -p tcp --dport {{ accept_tcp_ports[0] }} -j ACCEPT
-{%- elif accept_tcp_ports|length > 1 %}
+{%- if accept_tcp_ports|length > 0 %}
 -A TCP -p tcp -m multiport --dports {{ accept_tcp_ports|join(",") }} -j ACCEPT
 {% endif -%}
-{%- if accept_upd_ports|length == 1 %}
--A UDP -p upd --dport {{ accept_upd_ports[0] }} -j ACCEPT
-{%- elif accept_upd_ports|length > 1 %}
+{%- if accept_upd_ports|length > 0 %}
 -A UDP -p upd -m multiport --dports {{ accept_upd_ports|join(",") }} -j ACCEPT
 {% endif -%}
 {%- for port in limit_tcp_ports %}
