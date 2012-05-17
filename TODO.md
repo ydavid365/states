@@ -22,8 +22,7 @@ Server
   - Password protected cgit instance served through fcgiwrap.
 * Venv.
 * Gunicorn:
-  - Config templating/macro (/etc/gunicorn/name.conf).
-  - Init script (/etc/rc.d/gunicorn-name) or going.
+  - Look into using uwsgi instead.
   - Unprivileged user.
   - Logging (with rotation sending SIGHUP to reopen files).
 
