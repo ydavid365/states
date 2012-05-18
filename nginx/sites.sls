@@ -13,6 +13,7 @@ include:
         static_prefix: {{ site.static_prefix or False }}
         aliases: {{ site.aliases or [] }}
         upstreams: {{ site.upstreams or [] }}
+        uwsgi: {{ site.uwsgi or False }}
     - require:
       - file: /etc/nginx/conf.d
 {% endfor %}
