@@ -1,0 +1,8 @@
+[uwsgi]
+module = {{ module }}
+master = true
+processes = {{ processes }}
+socket = /var/run/uwsgi/%n.sock
+chdir = /usr/local/src/%n
+virtualenv = {{ venv }}
+logto = /var/log/uwsgi/%n.log

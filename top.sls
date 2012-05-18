@@ -17,8 +17,8 @@ base:
     - nginx
     - nginx.sites
     - going
-    - gunicorn
-    - gunicorn.instances
+    - uwsgi
+    - uwsgi.vassals
     - redis
     - postgresql
     - postgresql.python
