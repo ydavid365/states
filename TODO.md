@@ -23,6 +23,7 @@ Server
 * Venv.
 * Uwsgi:
   - Build with slimmed down buildconf.
+  - Add idle option for less used sites.
   - Log rotation (master and vassal logs). Need to reopen log files
     possibly by sending SIGHUP like for gunicorn.
   - Possibly use going for supervision of emperor process if it's unstable.
@@ -36,16 +37,14 @@ Deploy (MQ)
   in `_modules`.
   - What about access to salt? Run as root?
   - Update native package.
-  - Reload gunicorn.
-    - Need to get pid, either from extension of going or by
-      running gunicorns with a pid file.
+  - Reload uwsgi by touching vassal's ini file.
   - Ping check.
 * Using native packages for getting src and http content in place.
   - Private pacman repo.
     - Possibly add net.ipv4.conf.all.rp_filter = 1.
   - Remove sensitive config from package.
-    - Use env variables set in place with salt or settings file templated
-      by salt.
+    - Use env variables set in place with salt possibly added to the
+      uwsgi vassal ini files with the env key.
   - Compile assets.
   - Copy static assets dir to $PREFIX/srv/http/name.
     - Move favicon.ico in place.
