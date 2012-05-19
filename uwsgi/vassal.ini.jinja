@@ -5,4 +5,6 @@ processes = {{ processes }}
 socket = /var/run/uwsgi/%n.sock
 chdir = /usr/local/src/%n
 virtualenv = {{ venv }}
+auto-procname = true
+procname-prefix-spaced = %n:
 logto = /var/log/uwsgi/%n.log
