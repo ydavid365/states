@@ -1,8 +1,6 @@
 {% for vassal in pillar["uwsgi_vassals"] %}
 
-{% set venv = "/usr/local/venv/" ~ vassal.name %}
-
-{{ venv }}:
+/usr/local/venv/{{ vassal.name }}:
   virtualenv.managed:
     - system_site_packages: true
 
@@ -12,12 +10,11 @@
     - template: jinja
     - defaults:
         module: {{ vassal.module }}
-        venv: {{ venv }}
         processes: {{ vassal.processes or 2 }}
     - require:
       - file: /etc/uwsgi/vassals
       - file: /var/run/uwsgi
       - file: /var/log/uwsgi
-      - virtualenv: {{ venv }}
+      - virtualenv: /usr/local/venv/{{ vassal.name }}
 
 {% endfor %}
