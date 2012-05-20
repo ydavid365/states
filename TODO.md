@@ -22,7 +22,6 @@ Server
   - Password protected cgit instance served through fcgiwrap.
 * Venv.
 * Uwsgi:
-  - Build with slimmed down buildconf.
   - Add idle option for less used sites.
   - Log rotation (master and vassal logs). Need to reopen log files
     possibly by sending SIGHUP like for gunicorn.
