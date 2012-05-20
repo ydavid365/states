@@ -12,7 +12,7 @@
         module: {{ vassal.module }}
         processes: {{ vassal.processes or 2 }}
     - require:
-      - file: /etc/uwsgi/vassals
+      - pkg: uwsgi
       - file: /var/run/uwsgi
       - file: /var/log/uwsgi
       - virtualenv: /usr/local/venv/{{ vassal.name }}
