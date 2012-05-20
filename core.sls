@@ -12,6 +12,7 @@ corepkgs:
     - names:
       - inetutils
       - htop
+      - lsof
 
 unneededpkgs:
   pkg.purged:
