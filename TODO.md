@@ -14,6 +14,7 @@ Server
 * Salt:
   - Open firewall.
   - Restrict access to known IP-addresses.
+  - Possibly add net.ipv4.conf.all.rp_filter = 1.
 * Nginx:
   - Rewrite missing html extension.
   - SSL support.
@@ -35,8 +36,6 @@ Deploy (MQ)
   - Reload uwsgi by touching vassal's ini file.
   - Ping check.
 * Using native packages for getting src and http content in place.
-  - Private pacman repo.
-    - Possibly add net.ipv4.conf.all.rp_filter = 1.
   - Remove sensitive config from package.
     - Use env variables set in place with salt possibly added to the
       uwsgi vassal ini files with the env key.
@@ -55,7 +54,7 @@ Deploy (MQ)
 * Transfer shots and data.
 * Either set original server as read-only or replay commands afterwards.
 * Change DNS.
-* Take down nginx, gunicorn, monit.
+* Take down nginx, gunicorn, monit for MQ.
 * Remove backup settings for MQ data.
 
 
