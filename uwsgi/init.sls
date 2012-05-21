@@ -5,6 +5,7 @@ uwsgi:
     - name: uwsgi
     - enable: True
     - watch:
+      - file: /etc/uwsgi/common.ini
       - file: /etc/uwsgi/emperor.ini
 
 /etc/uwsgi/common.ini:
