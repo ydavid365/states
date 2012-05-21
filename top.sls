@@ -12,7 +12,6 @@ base:
     - sic
     - development*
     - packaging
-    - tarsnap.backup
     - nginx.sites
     - going
     - uwsgi.vassals
