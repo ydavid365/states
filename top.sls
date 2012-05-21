@@ -13,7 +13,6 @@ base:
     - development*
     - packaging
     - nginx.sites
-    - going
     - uwsgi.vassals
     - redis
     - postgresql.python
