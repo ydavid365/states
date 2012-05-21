@@ -23,8 +23,6 @@ Server
 * Venv.
 * Uwsgi:
   - Add idle option for less used sites.
-  - Log rotation (master and vassal logs). Need to reopen log files
-    possibly by sending SIGHUP like for gunicorn.
   - Possibly use going for supervision of emperor process if it's unstable.
   - Django support.
 

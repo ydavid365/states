@@ -1,12 +1,9 @@
 [uwsgi]
+inherit = /etc/uwsgi/common.ini
 module = {{ module }}
-master = true
 processes = {{ processes }}
 socket = /var/run/uwsgi/%n.sock
 chdir = /usr/local/src/%n
 virtualenv = /usr/local/venv/%n
-vacuum = true
-auto-procname = true
 procname-prefix-spaced = %n:
-disable-logging = true
 logto = /var/log/uwsgi/%n.log
