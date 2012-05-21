@@ -20,3 +20,7 @@ base:
     - postgresql.python
     - postgresql.databases
     - phantomjs
+  'magnesium.uggedal.com':
+    - tarsnap.backup
+    - nginx.sites
+    - redis

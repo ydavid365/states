@@ -6,8 +6,8 @@ include:
     - source: salt://tarsnap/backup.conf.jinja
     - template: jinja
     - defaults:
-        cmds: {{ pillar['tarsnap_backup_cmds'] }}
-        paths: {{ pillar['tarsnap_backup_paths'] }}
+        cmds: {{ pillar['tarsnap_backup_cmds'] or [] }}
+        paths: {{ pillar['tarsnap_backup_paths'] or [] }}
     - require:
       - pkg: tarsnap
 
