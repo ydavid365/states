@@ -38,3 +38,8 @@ unneededpkgs:
       - sudo
       - wget
       - whois
+      - dbus-core
+      - libfetch
+      - libidn
+      - libpcap
+      - libusb-compat

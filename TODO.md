@@ -47,8 +47,6 @@ Deploy (MQ)
     - Use gunicorn user and group.
   - Cleanup compiled assets.
 
-* New server.
-  - Basic, no zsh etc.
 * Setup backup of redis data and shots.
 * Test CDN.
 * Transfer shots and data.
