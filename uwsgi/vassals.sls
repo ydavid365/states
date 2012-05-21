@@ -1,3 +1,6 @@
+include:
+  - uwsgi
+
 {% for vassal in pillar["uwsgi_vassals"] %}
 
 /usr/local/venv/{{ vassal.name }}:
