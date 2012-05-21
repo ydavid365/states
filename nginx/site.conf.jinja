@@ -1,6 +1,5 @@
 {% if aliases %}
 server {
-  listen 80;
   server_name {{ aliases|join(" ") }};
   rewrite ^ http://{{ fqdn }}$request_uri? permanent;
 }
@@ -16,6 +15,9 @@ upstream {{ upstream_name }} {
 {%- endif %}
 
 server {
+  {%- if default %}
+  listen 80 default_server deferred;
+  {%- endif %}
   server_name {{ fqdn }};
   client_max_body_size 10m;
 

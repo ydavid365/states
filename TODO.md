@@ -15,7 +15,6 @@ Server
   - Open firewall.
   - Restrict access to known IP-addresses.
 * Nginx:
-  - Default vhost (with dererred).
   - Rewrite missing html extension.
   - SSL support.
 * Git:

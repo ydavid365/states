@@ -9,6 +9,7 @@ include:
     - defaults:
         fqdn: {{ site.fqdn }}
         root: {{ site.root }}
+        default: {{ site.default or False }}
         autoindex: {{ site.autoindex or False }}
         static_prefix: {{ site.static_prefix or False }}
         aliases: {{ site.aliases or [] }}
