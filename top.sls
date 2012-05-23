@@ -21,4 +21,5 @@ base:
   'magnesium.uggedal.com':
     - tarsnap.backup
     - nginx.sites
+    - uwsgi.vassals
     - redis
