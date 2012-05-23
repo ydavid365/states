@@ -52,6 +52,7 @@ Deploy (MQ)
 * Transfer shots and data.
 * Either set original server as read-only or replay commands afterwards.
 * Change DNS.
+* Change DNS to mq.es on MaxCDN.
 * Take down nginx, gunicorn, monit for MQ.
 * Remove backup settings for MQ data.
 
