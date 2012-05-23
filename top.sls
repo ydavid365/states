@@ -23,3 +23,4 @@ base:
     - nginx.sites
     - uwsgi.vassals
     - redis
+    - phantomjs
