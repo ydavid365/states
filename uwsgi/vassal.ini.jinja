@@ -3,7 +3,6 @@ inherit = /etc/uwsgi/common.ini
 module = {{ module }}
 processes = {{ processes }}
 socket = /var/run/uwsgi/%n.sock
-chdir = /usr/local/src/%n
 virtualenv = /usr/local/venv/%n
 procname-prefix-spaced = %n:
 logto = /var/log/uwsgi/%n.log

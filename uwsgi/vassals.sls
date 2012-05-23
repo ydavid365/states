@@ -3,9 +3,8 @@ include:
 
 {% for vassal in pillar["uwsgi_vassals"] %}
 
-/usr/local/venv/{{ vassal.name }}:
-  virtualenv.managed:
-    - system_site_packages: true
+{{ vassal.name }}:
+  pkg.installed
 
 /etc/uwsgi/vassals/{{ vassal.name }}.ini:
   file.managed:
@@ -15,9 +14,9 @@ include:
         module: {{ vassal.module }}
         processes: {{ vassal.processes or 2 }}
     - require:
+      - pkg: {{ vassal.name }}
       - file: /etc/uwsgi/common.ini
       - file: /var/run/uwsgi
       - file: /var/log/uwsgi
-      - virtualenv: /usr/local/venv/{{ vassal.name }}
 
 {% endfor %}
