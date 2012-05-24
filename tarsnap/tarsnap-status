@@ -20,10 +20,10 @@ print_stamp() {
 }
 
 print_stat "Number of archives" "$NUM_ARCHIVES"
-print_stat "Uncompressed total" "$(echo "$SIZES" | sed -n 1p)"
-print_stat "Uncompressed deduped" "$(echo "$SIZES" | sed -n 2p)"
-print_stat "Compressed total" "$(echo "$SIZES" | sed -n 3p)"
-print_stat "Compressed deduped" "$(echo "$SIZES" | sed -n 4p)"
+print_stat "Total raw" "$(echo "$SIZES" | sed -n 1p)"
+print_stat "Total compressed" "$(echo "$SIZES" | sed -n 2p)"
+print_stat "Deduped raw" "$(echo "$SIZES" | sed -n 3p)"
+print_stat "Deduped compressed" "$(echo "$SIZES" | sed -n 4p)"
 print_stat "From" "$(print_stamp $FIRST_STAMP)"
 print_stat "To" "$(print_stamp $LAST_STAMP)"
 printf "%50s\n" | tr ' ' '-'
