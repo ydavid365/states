@@ -39,6 +39,11 @@ server {
   }
   {%- endif %}
 
+  location /favicon.ico {
+    expires 3M;
+    access_log off;
+  }
+
   location / {
     {%- if upstreams %}
     try_files $uri @{{ upstream_name }};
