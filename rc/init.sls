@@ -8,11 +8,11 @@
         hostname: 'localhost'
         daemons:
           - syslog-ng
+          - iptables
           - network
           - sshd
           - ntpd
           - crond
-          - iptables
 {% if pillar['daemons'] %}
     - context:
         daemons: {{ pillar['daemons'] }}
