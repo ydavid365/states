@@ -19,7 +19,6 @@ Server
 * Git:
   - Password protected cgit instance served through fcgiwrap.
 * Uwsgi:
-  - Add idle option for less used sites.
   - Possibly use going for supervision of emperor process if it's unstable.
 
 
