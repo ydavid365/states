@@ -1,16 +1,11 @@
-Essential
----------
+Server
+------
 
 * Pacman repo served by nginx:
   - [Package signing](http://jasonwryan.com/blog/2012/03/23/key/)
     for pkg.uggedal.com.
   - Wrapper script for adding/updating/purging old packages.
 * Turn on signature checking for all packages if possible.
-
-
-Server
-------
-
 * Iptables:
   - Possibly add net.ipv4.conf.all.rp_filter = 1.
 * Nginx:
