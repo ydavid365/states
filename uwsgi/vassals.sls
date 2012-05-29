@@ -11,6 +11,7 @@ include:
     - source: salt://uwsgi/vassal.ini.jinja
     - template: jinja
     - defaults:
+        django: {{ vassal.django or False }}
         module: {{ vassal.module }}
         processes: {{ vassal.processes or 2 }}
     - require:

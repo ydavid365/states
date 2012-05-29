@@ -1,6 +1,11 @@
 [uwsgi]
 inherit = /etc/uwsgi/common.ini
+{% if django %}
+env = DJANGO_SETTINGS_MODULE={{ module }}.settings
+module = django.core.handlers.wsgi:WSGIHandler()
+{% else %}
 module = {{ module }}
+{% endif %}
 processes = {{ processes }}
 socket = /var/run/uwsgi/%n.sock
 virtualenv = /usr/local/venv/%n
