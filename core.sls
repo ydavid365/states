@@ -34,7 +34,6 @@ unneededpkgs:
       - net-tools
       - netcfg
       - unzip
-      - gettext
       - mtr
       - sudo
       - wget
