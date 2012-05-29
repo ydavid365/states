@@ -6,6 +6,7 @@ include:
   - logrotate
   - iptables
   - ssh
+  - cron.jobs
 
 corepkgs:
   pkg.installed:
