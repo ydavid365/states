@@ -15,7 +15,6 @@ base:
     - nginx.sites
     - uwsgi.vassals
     - redis
-    - postgresql.python
     - postgresql.databases
     - phantomjs
   'magnesium.uggedal.com':
