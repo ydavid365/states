@@ -2,6 +2,7 @@
 
 {{ job.cmd }}:
   cron.present:
+    - user: {{ job.user or 'root' }}
     - minute: "{{ job.minute or '*' }}"
     - hour: "{{ job.hour or '*' }}"
 
