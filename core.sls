@@ -7,6 +7,7 @@ include:
   - iptables
   - ssh
   - cron.jobs
+  - extra_packages
 
 corepkgs:
   pkg.installed:
