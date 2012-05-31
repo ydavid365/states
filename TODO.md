@@ -2,10 +2,6 @@ Migration
 ---------
 
 * Move DNS for vivaglasmagasinet.no and www.vivaglasmagasinet.no to magnesium.
-* Move journal.uggedal.com to magnesium.
-* Move DNS for journal.uggedal.com to magnesium.
-* Move wasitup.com to magnesium.
-* Move DNS for wasitupcom and www.wasitup.com to magnesium.
 * Kill neon.
 
 
@@ -28,6 +24,8 @@ Server
   - Possibly use going for supervision of emperor process if it's unstable.
 * Statsite[statsite]:
   - Create PKGBUILD and handle it with salt.
+* Collectd.
+  - Need a proxy to graphite.
 * Graphite.
   - Create PKGBUILD and handle it with salt.
 * Alerting/monitoring.
