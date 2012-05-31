@@ -19,6 +19,8 @@ Server
   - Create PKGBUILD and handle it with salt.
 * Graphite.
   - Create PKGBUILD and handle it with salt.
+* Alerting/monitoring.
+  - Something lightweight (maybe write something in C).
 
 
 Desktop
