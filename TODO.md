@@ -15,6 +15,10 @@ Server
   - Password protected cgit instance served through fcgiwrap.
 * Uwsgi:
   - Possibly use going for supervision of emperor process if it's unstable.
+* Statsite[statsite]:
+  - Create PKGBUILD and handle it with salt.
+* Graphite.
+  - Create PKGBUILD and handle it with salt.
 
 
 Desktop
@@ -31,3 +35,5 @@ Desktop
 * Sxiv.
 * Mupdf.
 * Unclutter.
+
+[statsite]: https://github.com/armon/statsite
