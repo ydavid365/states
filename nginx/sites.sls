@@ -15,6 +15,7 @@ include:
         aliases: {{ site.aliases or [] }}
         upstreams: {{ site.upstreams or [] }}
         uwsgi: {{ site.uwsgi or False }}
+        append_html_to_path: {{ site.append_html_to_path or False }}
     - require:
       - file: /etc/nginx/conf.d
 {% endfor %}

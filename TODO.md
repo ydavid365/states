@@ -1,3 +1,14 @@
+Migration
+---------
+
+* Move DNS for vivaglasmagasinet.no and www.vivaglasmagasinet.no to magnesium.
+* Move journal.uggedal.com to magnesium.
+* Move DNS for journal.uggedal.com to magnesium.
+* Move wasitup.com to magnesium.
+* Move DNS for wasitupcom and www.wasitup.com to magnesium.
+* Kill neon.
+
+
 Server
 ------
 
