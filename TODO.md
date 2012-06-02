@@ -22,7 +22,7 @@ Server
   - Password protected cgit instance served through fcgiwrap.
 * Uwsgi:
   - Possibly use going for supervision of emperor process if it's unstable.
-* Statsite[statsite]:
+* [Statsite][statsite]:
   - Create PKGBUILD and handle it with salt.
 * Collectd.
   - Need a proxy to graphite.
