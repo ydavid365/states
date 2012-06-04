@@ -1,10 +1,3 @@
-Migration
----------
-
-* Move DNS for vivaglasmagasinet.no and www.vivaglasmagasinet.no to magnesium.
-* Kill neon.
-
-
 Server
 ------
 
