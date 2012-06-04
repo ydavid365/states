@@ -5,16 +5,16 @@ Server
   - [Package signing](http://jasonwryan.com/blog/2012/03/23/key/)
     for pkg.uggedal.com.
   - Wrapper script for adding/updating/purging old packages.
-* Turn on signature checking for all packages if possible.
+* Package signing:
+  - Find a better way generate gpg key.
+  - Turn on signature checking for official packages.
+  - Turn on signature checking for pkg.uggedal.com.
 * Iptables:
   - Possibly add net.ipv4.conf.all.rp_filter = 1.
 * Nginx:
-  - Rewrite missing html extension.
   - SSL support.
 * Git:
   - Password protected cgit instance served through fcgiwrap.
-* Uwsgi:
-  - Possibly use going for supervision of emperor process if it's unstable.
 * [Statsite][statsite]:
   - Create PKGBUILD and handle it with salt.
 * Collectd.
