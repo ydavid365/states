@@ -16,11 +16,9 @@ base:
     - uwsgi.vassals
     - redis
     - postgresql.databases
-    - phantomjs
   'magnesium.uggedal.com':
     - tarsnap.backup
     - nginx.sites
     - uwsgi.vassals
     - redis
     - postgresql.databases
-    - phantomjs

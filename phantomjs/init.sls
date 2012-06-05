@@ -1,2 +1,0 @@
-phantomjs:
-  pkg.installed
