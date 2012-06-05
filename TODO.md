@@ -32,7 +32,7 @@ Desktop
 * Wireless.
 * Xorg.
 * Nvidia.
-* Spectrwm, monsterwm or DWM with dmenu.
+* DWM with dmenu, no-ffm patch and solarized colors.
 * Mplayer.
 * Spotify.
 * Urxvt or st.
