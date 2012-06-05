@@ -6,7 +6,7 @@ Server
     for pkg.uggedal.com.
   - Wrapper script for adding/updating/purging old packages.
 * Package signing:
-  - Find a better way generate gpg key.
+  - Find a better way to generate gpg key.
   - Turn on signature checking for official packages.
   - Turn on signature checking for pkg.uggedal.com.
 * Iptables:
@@ -39,5 +39,6 @@ Desktop
 * Sxiv.
 * Mupdf.
 * Unclutter.
+* Firefox or dwb (what about Lastpass).
 
 [statsite]: https://github.com/armon/statsite
