@@ -2,13 +2,12 @@ Server
 ------
 
 * Pacman repo served by nginx:
-  - [Package signing](http://jasonwryan.com/blog/2012/03/23/key/)
-    for pkg.uggedal.com.
-  - Wrapper script for adding/updating/purging old packages.
-* Package signing:
-  - Find a better way to generate gpg key.
+  - Wrapper script for adding/updating/purging packages.
+* Signed packages:
+  - Find a better way to generate gpg key without X.
   - Turn on signature checking for official packages.
-  - Turn on signature checking for pkg.uggedal.com.
+  - Add [package signing][pkgsign] for local packages.
+  - Turn on signature checking for local packages.
 * Iptables:
   - Possibly add net.ipv4.conf.all.rp_filter = 1.
 * Nginx:
@@ -17,11 +16,37 @@ Server
   - Password protected cgit instance served through fcgiwrap.
 * [Statsite][statsite]:
   - Create PKGBUILD and handle it with salt.
-* Collectd.
-  - Need a proxy to graphite.
-* Graphite.
+* Collectd:
+  - Write to graphite.
+  - Configure collection of:
+      - CPU.
+      - Df.
+      - Disk.
+      - Interface (network).
+      - Load.
+      - Memory.
+      - Nginx.
+      - Postgresql.
+      - Redis.
+      - Processes.
+      - Swap.
+      - Tail (or use [logster][logster]).
+  - Possibly collect:
+      - ConnTrack.
+      - IPTables.
+      - TCPConns.
+      - Uptime.
+      - Users.
+* Graphite:
   - Create PKGBUILD and handle it with salt.
-* Alerting/monitoring.
+  - Setup dashboard. Chose one of:
+      - https://github.com/jondot/graphene
+      - https://github.com/obfuscurity/tasseo
+      - https://github.com/fetep/pencil
+      - https://github.com/ripienaar/gdash
+* [Logster][logster]:
+  - Look at [example][logsterexample].
+* Alerting/monitoring:
   - Something lightweight (maybe write something in C).
 
 
@@ -41,4 +66,7 @@ Desktop
 * Unclutter.
 * Firefox or dwb (what about Lastpass).
 
+[pkgsign]: http://jasonwryan.com/blog/2012/03/23/key/
 [statsite]: https://github.com/armon/statsite
+[logster]: https://github.com/etsy/logster
+[logsterexample]: http://www.kickflop.net/blog/2012/03/30/any-metric-graphing-with-graphite-and-syslog/
