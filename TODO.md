@@ -64,7 +64,8 @@ Desktop
 * Sxiv.
 * Mupdf.
 * Unclutter.
-* Firefox or dwb (what about Lastpass).
+* Firefox or dwb (what about Lastpass?).
+* PT Mono in terminal and dwm.
 
 [pkgsign]: http://jasonwryan.com/blog/2012/03/23/key/
 [statsite]: https://github.com/armon/statsite
