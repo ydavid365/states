@@ -11,6 +11,8 @@ processes = {{ processes }}
 idle = 60
 {% endif %}
 socket = /var/run/uwsgi/%n.sock
+{% if not global %}
 virtualenv = /usr/local/venv/%n
+{% endif %}
 procname-prefix-spaced = %n:
 logto = /var/log/uwsgi/%n.log

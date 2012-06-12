@@ -15,6 +15,7 @@ include:
         module: {{ vassal.module }}
         processes: {{ vassal.processes or 2 }}
         idle: {{ vassal.idle or False }}
+        global: {{ vassal.global or False }}
     - require:
       - pkg: {{ vassal.name }}
       - file: /etc/uwsgi/common.ini
