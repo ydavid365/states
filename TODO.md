@@ -57,7 +57,8 @@ Desktop
 * Wireless.
 * Xorg.
 * Nvidia.
-* DWM with dmenu, no-ffm patch and solarized colors.
+* DWM with dmenu, no-ffm patch and solarized colors or
+  monsterwm with some-sorta-bar and dmenu and soliarzed colors.
 * Mplayer.
 * Spotify.
 * Urxvt or st.
