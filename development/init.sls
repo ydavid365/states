@@ -10,3 +10,4 @@ devpkgs:
       - cloc
       - gettext
       - python2-pygments
+      - vmtouch-git
