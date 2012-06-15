@@ -2,9 +2,6 @@ base:
   '*':
     - core
     - pacman.uk
-    - kernel.xen
-    - grub
-    - fstab
     - users
   'sodium.uggedal.com':
     - server

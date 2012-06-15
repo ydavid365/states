@@ -1,3 +1,8 @@
+include:
+  - kernel.xen
+  - grub
+  - fstab
+
 unneededserverpkgs:
   pkg.purged:
     - names:
