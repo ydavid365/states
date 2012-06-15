@@ -21,3 +21,5 @@ base:
     - uwsgi.vassals
     - redis
     - postgresql.databases
+  'aluminium.uggedal.com':
+    - zsh
