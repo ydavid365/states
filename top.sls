@@ -23,3 +23,4 @@ base:
     - postgresql.databases
   'aluminium.uggedal.com':
     - zsh
+    - xorg.nvidia
