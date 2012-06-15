@@ -7,6 +7,7 @@ base:
     - fstab
     - users
   'sodium.uggedal.com':
+    - server
     - salt.master
     - zsh
     - sic
@@ -17,6 +18,7 @@ base:
     - redis
     - postgresql.databases
   'magnesium.uggedal.com':
+    - server
     - tarsnap.backup
     - nginx.sites
     - uwsgi.vassals
