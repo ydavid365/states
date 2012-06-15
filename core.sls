@@ -12,6 +12,7 @@ include:
 corepkgs:
   pkg.installed:
     - names:
+      - ntp
       - inetutils
       - htop
       - lsof
