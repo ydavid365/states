@@ -23,4 +23,6 @@ base:
     - postgresql.databases
   'aluminium.uggedal.com':
     - zsh
+    - acpid
     - xorg.nvidia
+    - development

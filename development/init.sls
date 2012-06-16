@@ -9,5 +9,4 @@ devpkgs:
       - inotify-tools
       - cloc
       - gettext
-      - python2-pygments
-      - vmtouch-git
+      - vmtouch

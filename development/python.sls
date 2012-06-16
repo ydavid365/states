@@ -16,3 +16,6 @@ python2-virtualenv:
     - target: /usr/bin/virtualenv2
     - require:
       - pkg: python2-virtualenv
+
+python2-pygments:
+  pkg.installed
