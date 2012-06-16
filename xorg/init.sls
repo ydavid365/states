@@ -3,3 +3,8 @@ xorgpkgs:
     - names:
       - xorg-server
       - xorg-xinit
+
+fonts:
+  pkg.installed:
+    - names:
+      - ttf-dejavu
