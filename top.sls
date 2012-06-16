@@ -25,4 +25,5 @@ base:
     - zsh
     - acpid
     - xorg.nvidia
+    - xorg.mac
     - development
