@@ -11,3 +11,4 @@ unneededserverpkgs:
       - netcfg
       - unzip
       - dbus-core
+      - libusb-compat

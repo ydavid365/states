@@ -40,4 +40,3 @@ unneededpkgs:
       - libfetch
       - libidn
       - libpcap
-      - libusb-compat
