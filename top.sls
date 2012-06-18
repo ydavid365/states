@@ -27,4 +27,3 @@ base:
     - xorg.nvidia
     - xorg.mac
     - development
-    - mplayer
