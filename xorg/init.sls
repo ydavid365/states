@@ -5,6 +5,7 @@ xorgpkgs:
       - xorg-xrdb
       - xorg-xinit
       - xorg-xrandr
+      - xorg-xsetroot
 
 fonts:
   pkg.installed:
