@@ -1,8 +1,17 @@
 nginx:
-  pkg:
-    - installed
+  pkg.installed
+
+nginx-rc:
+  service.running:
+    - name: nginx
+    - enable: True
+    - watch:
+      - file: /etc/nginx/conf/nginx.conf
+      - file: /etc/nginx/conf/mime.types
+      - file: /etc/nginx/conf.d/*.conf
+
+/etc/nginx/conf/nginx.conf:
   file.managed:
-    - name: /etc/nginx/conf/nginx.conf
     - source: salt://nginx/nginx.conf.jinja
     - template: jinja
     - defaults:
@@ -10,12 +19,6 @@ nginx:
         worker_processes: 1
     - require:
       - pkg: nginx
-  service.running:
-    - enable: True
-    - watch:
-      - file: nginx
-      - file: /etc/nginx/conf/mime.types
-      - file: /etc/nginx/conf.d/*.conf
 
 /etc/nginx/conf/mime.types:
   file.managed:

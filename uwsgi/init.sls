@@ -1,6 +1,7 @@
 uwsgi:
-  pkg:
-    - installed
+  pkg.installed
+
+uwsgi-rc:
   service.running:
     - name: uwsgi
     - enable: True
