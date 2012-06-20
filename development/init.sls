@@ -9,4 +9,3 @@ devpkgs:
       - inotify-tools
       - cloc
       - gettext
-      - vmtouch-git
