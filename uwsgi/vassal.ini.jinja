@@ -1,5 +1,8 @@
 [uwsgi]
 inherit = /etc/uwsgi/common.ini
+{% if chdir %}
+chdir = {{ chdir }}
+{% endif %}
 {% if django %}
 env = DJANGO_SETTINGS_MODULE={{ module }}.settings
 module = django.core.handlers.wsgi:WSGIHandler()

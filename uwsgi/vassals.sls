@@ -11,6 +11,7 @@ include:
     - source: salt://uwsgi/vassal.ini.jinja
     - template: jinja
     - defaults:
+        chdir: {{ vassal.chdir or False }}
         django: {{ vassal.django or False }}
         module: {{ vassal.module }}
         processes: {{ vassal.processes or 2 }}
