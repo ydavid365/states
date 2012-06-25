@@ -9,6 +9,8 @@ postgresql_createuser {{ owner }}:
     - unless: psql --tuples-only -c 'SELECT rolname FROM pg_catalog.pg_roles;' | grep '^ {{ owner }}$'
     - user: postgres
     - cwd: '/'
+    - require:
+      - service: postgresql
 
 postgresql_createdb {{ name }}:
   cmd.run:
