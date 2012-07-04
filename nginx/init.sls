@@ -32,12 +32,6 @@ nginx-rc:
     - require:
       - pkg: nginx
 
-nginx-cruft:
-  file.absent:
-    - names:
-      - /etc/nginx/html
-      - /etc/nginx/logs
-
 /etc/nginx/conf.d:
   file.directory:
     - require:
