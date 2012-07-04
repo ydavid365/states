@@ -6,11 +6,11 @@ nginx-rc:
     - name: nginx
     - enable: True
     - watch:
-      - file: /etc/nginx/conf/nginx.conf
-      - file: /etc/nginx/conf/mime.types
+      - file: /etc/nginx/nginx.conf
+      - file: /etc/nginx/mime.types
       - file: /etc/nginx/conf.d/*.conf
 
-/etc/nginx/conf/nginx.conf:
+/etc/nginx/nginx.conf:
   file.managed:
     - source: salt://nginx/nginx.conf.jinja
     - template: jinja
@@ -20,7 +20,7 @@ nginx-rc:
     - require:
       - pkg: nginx
 
-/etc/nginx/conf/mime.types:
+/etc/nginx/mime.types:
   file.managed:
     - source: salt://nginx/mime.types
     - require:
