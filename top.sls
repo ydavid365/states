@@ -1,9 +1,9 @@
 base:
   '*':
     - core
-    - pacman.uk
     - users
   'sodium.uggedal.com':
+    - pacman.uk
     - server
     - salt.master
     - zsh
@@ -15,6 +15,7 @@ base:
     - redis
     - postgresql.databases
   'magnesium.uggedal.com':
+    - pacman.uk
     - server
     - tarsnap.backup
     - nginx.sites
@@ -22,6 +23,7 @@ base:
     - redis
     - postgresql.databases
   'aluminium.uggedal.com':
+    - pacman.no
     - zsh
     - acpid
     - xorg.nvidia
