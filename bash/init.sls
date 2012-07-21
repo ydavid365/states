@@ -6,5 +6,9 @@
   file.managed:
     - source: salt://bash/inputrc
 
+/etc/bash.bashrc:
+  file.managed:
+    - source: salt://bash/bash.bashrc
+
 bash-completion:
   pkg.installed
