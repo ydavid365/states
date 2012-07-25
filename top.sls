@@ -28,3 +28,4 @@ base:
     - acpid
     - xorg.nvidia
     - development
+    - netcfg.profiles
