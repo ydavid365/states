@@ -13,10 +13,9 @@
           - sshd
           - ntpd
           - crond
-{% if pillar['daemons'] %}
     - context:
-        daemons: {{ pillar['daemons'] }}
-{% endif %}
+        interface: {{ pillar['interface'] }}
+        daemons: {{ pillar['daemons'] or [] }}
 
 /etc/hosts:
   file.managed:

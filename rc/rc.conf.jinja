@@ -26,7 +26,7 @@ USELVM="no"
 # ----------
 HOSTNAME="{{ grains['host'] }}"
 
-interface=eth0
+interface={% if interface %}{{ interface }}{% endif %}
 address=
 netmask=
 broadcast=
