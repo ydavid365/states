@@ -1,3 +1,5 @@
+Server
+------
 * Pacman repo served by nginx:
   - Wrapper script for adding/updating/purging packages.
 * Signed packages:
@@ -45,6 +47,47 @@
   - Look at [example][logsterexample].
 * Alerting/monitoring:
   - Something lightweight (maybe write something in C).
+
+
+Desktop
+-------
+* Urxvt
+  - Fix xft rendering and find appropriate font (maybe roboto).
+* DWB
+  - Create lastpass function bound to key based on bookmarklet. Do not
+    share this in the public git repo (possibly read key from file).
+  - Create pocket function.
+  - Mimic vimium hint style by using custom stylesheet and dwb_hint class:
+    https://github.com/philc/vimium/blob/master/vimium.css
+  - Hook up youtube-dl wrapper:
+    https://bitbucket.org/portix/dwb/src/bb0ecac44892/examples/youtube.sh
+    (use -t and save to home dir and rewrite to js like
+    https://bitbucket.org/portix/dwb/src/bb0ecac44892/examples/js/autoquvi.js).
+    or js
+  - Hook up adblock and add cron task:
+    https://bitbucket.org/portix/dwb/src/bb0ecac44892/examples/grab_adblocker
+* Fix colors in vim inside tmux.
+
+
+Raspberry PI
+------------
+* External HDD.
+* ArchLinux ARM managed by salt.
+* Update firmware: https://github.com/Hexxeh/rpi-update
+* Need keyboard? Check if its possible to get arch image with sshd running.
+* Overclocking without overvolting:
+  - arm_freq=850, sdram_freq=500, core_freq=450, or
+  - arm_freq=850, core_freq=450
+* Cross compiling ARM packages from x64_86 host?
+* omxplayer (can be controlled over ssh/tmux).
+* No need for X as it is not accelerated and omxplayer does not use it.
+* rtorrent in tmux or btpd.
+* Mopidy or other console spotify client like despotify or libspotify ARM.
+
+* Web
+  - Look into converting journal and home page to:
+    https://github.com/nuex/zodiac
+  - Redirect journal.uggedal.com to ugggedal.com/journal.
 
 
 [pkgsign]: http://jasonwryan.com/blog/2012/03/23/key/

@@ -29,3 +29,10 @@ base:
     - xorg.nvidia
     - development
     - netcfg.profiles
+  'silicon.uggedal.com':
+    - pacman.no
+    - zsh
+    - acpid
+    - xorg.intel
+    - development
+    - netcfg.profiles
