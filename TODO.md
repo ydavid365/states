@@ -83,20 +83,10 @@ Raspberry PI
 * External HDD.
 * ArchLinux ARM managed by salt.
 * Update firmware: https://github.com/Hexxeh/rpi-update
-* Need keyboard? Check if its possible to get arch image with sshd running.
-* Overclocking without overvolting:
-  - arm_freq=850, sdram_freq=500, core_freq=450, or
-  - arm_freq=850, core_freq=450
-* Cross compiling ARM packages from x64_86 host?
-* omxplayer (can be controlled over ssh/tmux).
-* No need for X as it is not accelerated and omxplayer does not use it.
+* Host packages on repo server. Symlink any arch packages like salt.
+* Make omxplayer git version work as efficiently as bin version.
 * rtorrent in tmux or btpd.
 * Mopidy or other console spotify client like despotify or libspotify ARM.
-
-* Web
-  - Look into converting journal and home page to:
-    https://github.com/nuex/zodiac
-  - Redirect journal.uggedal.com to ugggedal.com/journal.
 
 
 [pkgsign]: http://jasonwryan.com/blog/2012/03/23/key/
