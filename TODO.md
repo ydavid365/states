@@ -67,6 +67,15 @@ Desktop
   - Hook up adblock and add cron task:
     https://bitbucket.org/portix/dwb/src/bb0ecac44892/examples/grab_adblocker
 * Fix colors in vim inside tmux.
+* Fork lightum as lighterum:
+  - Remove dbus dependency.
+  - Remove manual mode.
+  - Remove config file.
+  - Remove unneeded options.
+  - Write directly to proc, make sure it is ran as root and not an
+    unprivileged user.
+  - Create PKGBUILD with rc script and possibly systemd unit.
+  - Look into using inotify against /proc in stead of polling.
 
 
 Raspberry PI
