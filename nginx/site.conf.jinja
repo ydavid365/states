@@ -4,6 +4,12 @@ server {
   rewrite ^ http://{{ fqdn }}$request_uri? permanent;
 }
 {% endif %}
+{% if subdomain_to_path_alias %}
+server {
+  server_name {{ subdomain_to_path_alias }};
+  rewrite ^ http://{{ fqdn }}/{{ subdomain_to_path_alias.split('.', 1)[0] }}$request_uri? permanent;
+}
+{% endif %}
 
 {%- set upstream_name = fqdn|replace(".", "-") ~ "-backend" %}
 {%- if upstreams %}
