@@ -30,6 +30,7 @@ base:
     - development
     - netcfg.profiles
   'silicon.uggedal.com':
+    - systemd
     - pacman.no
     - zsh
     - acpid
