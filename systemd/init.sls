@@ -1,2 +1,5 @@
-systemd:
-  pkg.installed
+systemdpkgs:
+  pkg.installed:
+    - names:
+      - systemd
+      - systemd-sysvcompat
