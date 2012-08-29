@@ -1,11 +1,3 @@
-/etc/rc.conf:
-  file.managed:
-    - source: salt://rc/rc.conf.jinja
-    - template: jinja
-    - context:
-        interface: {{ pillar['interface'] }}
-        daemons: {{ pillar['daemons'] or [] }}
-
 /etc/hostname:
   file.managed:
     - source: salt://rc/hostname.jinja
