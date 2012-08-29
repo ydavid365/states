@@ -1,8 +1,8 @@
 iptables:
   pkg:
     - installed
-  service.running:
-    - enabled: True
+  service.enabled:
+    - provider: systemd
     - require:
       - pkg: iptables
 
