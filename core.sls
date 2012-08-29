@@ -7,6 +7,7 @@ include:
   - iptables
   - ntp
   - ssh
+  - cron
   - cron.jobs
   - extra_packages
 
