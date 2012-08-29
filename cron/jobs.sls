@@ -1,3 +1,6 @@
+include:
+  - cron
+
 {% for job in pillar["cron_jobs"] %}
 
 {{ job.cmd }}:
