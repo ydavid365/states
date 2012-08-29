@@ -5,6 +5,7 @@ include:
   - pacman
   - logrotate
   - iptables
+  - ntp
   - ssh
   - cron.jobs
   - extra_packages
@@ -12,7 +13,6 @@ include:
 corepkgs:
   pkg.installed:
     - names:
-      - ntp
       - inetutils
       - htop
       - lsof
