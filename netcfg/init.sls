@@ -1,16 +1,12 @@
 netcfg:
   pkg:
     - installed
-
-netcfg-service-file:
-  file.symlink:
-    - name: "/etc/systemd/system/netcfg@{{ pillar['netcfg_profile'] }}.service"
-    - target: "/usr/lib/systemd/system/netcfg@{{ pillar['netcfg_profile'] }}.service"
-
-netcfg-service:
+  file.managed:
+    - name: /etc/conf.d/netcfg
+    - source: salt://netcfg/netcfg.conf.jinja
+    - template: jinja
   service.running:
-    - name: "netcfg@{{ pillar['netcfg_profile'] }}"
     - enable: True
     - provider: systemd
     - require:
-      - file: netcfg-service-file
+      - file: netcfg
