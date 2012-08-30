@@ -3,18 +3,21 @@ base:
 #  '*':
 #    - core
 #    - users
-#  'sodium.uggedal.com':
-#    - pacman.uk
-#    - server
-#    - salt.master
-#    - zsh
-#    - sic
-#    - development*
-#    - packaging
-#    - nginx.sites
-#    - uwsgi.vassals
-#    - redis
-#    - postgresql.databases
+  'sodium.uggedal.com':
+    - core
+    - users
+    - dhcp
+    - pacman.uk
+    - server
+    - salt.master
+    - zsh
+    - sic
+    - development*
+    - packaging
+    - nginx.sites
+    - uwsgi.vassals
+    - redis
+    - postgresql.databases
 #  'magnesium.uggedal.com':
 #    - pacman.uk
 #    - server
