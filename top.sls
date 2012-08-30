@@ -1,4 +1,5 @@
 base:
+# TODO: - move core, users to *
 #  '*':
 #    - core
 #    - users
@@ -32,7 +33,6 @@ base:
   'silicon.uggedal.com':
     - core
     - users
-    - systemd
     - pacman.no
     - zsh
     - acpid
