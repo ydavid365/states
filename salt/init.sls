@@ -19,6 +19,7 @@ salt-config-templates:
 salt-minion:
   service.running:
     - enabled: True
+    - provider: systemd
     - watch:
       - file: /etc/salt/minion
     - require:
