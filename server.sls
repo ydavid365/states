@@ -10,5 +10,4 @@ unneededserverpkgs:
       - device-mapper
       - netcfg
       - unzip
-      - dbus-core
       - libusb-compat
