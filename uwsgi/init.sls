@@ -2,10 +2,6 @@ uwsgi:
   pkg:
     - installed
 
-"uwsgi@":
-  service.enabled:
-    - provider: systemd
-
 /etc/uwsgi/common.ini:
   file.managed:
     - source: salt://uwsgi/common.ini
