@@ -6,7 +6,17 @@ include:
 {{ service.name }}:
   pkg.installed
 
-/etc/uwsgi/services/{{ service.name }}.ini:
+"uwsgi@{{ service.name }}":
+  service.running:
+    - enable: True
+    - provider: systemd
+    - watch:
+      - file: /etc/uwsgi/common.ini
+      - file: /etc/uwsgi/{{ service.name }}.ini
+    - require:
+      - file: /etc/uwsgi/{{ service.name }}.ini
+
+/etc/uwsgi/{{ service.name }}.ini:
   file.managed:
     - source: salt://uwsgi/service.ini.jinja
     - template: jinja

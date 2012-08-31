@@ -1,12 +1,10 @@
 uwsgi:
   pkg:
     - installed
-  service.running:
-    - name: uwsgi
-    - enable: True
+
+"uwsgi@":
+  service.enabled:
     - provider: systemd
-    - watch:
-      - file: /etc/uwsgi/common.ini
 
 /etc/uwsgi/common.ini:
   file.managed:
