@@ -1,30 +1,21 @@
 uwsgi:
-  pkg.installed
-
-uwsgi-rc:
+  pkg:
+    - installed
   service.running:
     - name: uwsgi
     - enable: True
+    - provider: systemd
     - watch:
       - file: /etc/uwsgi/common.ini
-      - file: /etc/uwsgi/emperor.ini
 
 /etc/uwsgi/common.ini:
   file.managed:
     - source: salt://uwsgi/common.ini
-    - require:
-      - pkg: uwsgi
-
-/etc/uwsgi/emperor.ini:
-  file.managed:
-    - source: salt://uwsgi/emperor.ini
-    - require:
-      - file: /etc/uwsgi/common.ini
-
-/var/run/uwsgi:
-  file.directory:
+    - mode: 640
     - user: http
     - group: http
+    - require:
+      - pkg: uwsgi
 
 /var/log/uwsgi:
   file.directory:

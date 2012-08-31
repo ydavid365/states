@@ -15,7 +15,7 @@ base:
     - development*
     - packaging
     - nginx.sites
-    - uwsgi.vassals
+    - uwsgi.services
     - redis
     - postgresql.databases
 #  'magnesium.uggedal.com':
@@ -23,7 +23,7 @@ base:
 #    - server
 #    - tarsnap.backup
 #    - nginx.sites
-#    - uwsgi.vassals
+#    - uwsgi.services
 #    - redis
 #    - postgresql.databases
 #  'aluminium.uggedal.com':

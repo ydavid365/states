@@ -1,4 +1,5 @@
 [uwsgi]
+
 inherit = /etc/uwsgi/common.ini
 {% if chdir %}
 chdir = {{ chdir }}
@@ -13,7 +14,7 @@ processes = {{ processes }}
 {% if idle %}
 idle = 60
 {% endif %}
-socket = /var/run/uwsgi/%n.sock
+socket = /run/uwsgi/%n.sock
 {% if not global %}
 virtualenv = /usr/local/venv/%n
 {% endif %}
