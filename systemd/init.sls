@@ -4,6 +4,10 @@ systemdpkgs:
       - systemd
       - systemd-sysvcompat
 
+/etc/systemd/system/default.target:
+  file.symlink:
+    - target: /usr/lib/systemd/system/multi-user.target
+
 /etc/hostname:
   file.managed:
     - source: salt://systemd/hostname.jinja
