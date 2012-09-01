@@ -12,6 +12,7 @@ redis:
       - pkg: redis
   service.running:
     - enable: True
+    - provider: systemd
     - watch:
       - file: redis
 
