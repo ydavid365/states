@@ -17,7 +17,7 @@ base:
     - nginx.sites
     - uwsgi.services
     - redis
-    - postgresql.databases
+    #- postgresql.databases
 #  'magnesium.uggedal.com':
 #    - pacman.uk
 #    - server
