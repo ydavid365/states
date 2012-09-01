@@ -13,6 +13,7 @@ base-devel:
       - make
       - patch
       - pkg-config
+      - abs
 
 /etc/makepkg.conf:
   file.managed:
