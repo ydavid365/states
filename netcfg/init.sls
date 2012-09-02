@@ -10,3 +10,10 @@ netcfg:
     - provider: systemd
     - require:
       - file: netcfg
+      - file: netcfg-service-override
+
+netcfg-service-override:
+  file.managed:
+    - name: /etc/systemd/system/netcfg.service
+    - source: salt://netcfg/netcfg.service.jinja
+    - template: jinja
