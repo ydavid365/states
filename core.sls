@@ -9,6 +9,7 @@ include:
   - ssh
   - cron
   - cron.jobs
+  - tmpfiles
   - extra_packages
 
 corepkgs:
