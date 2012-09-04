@@ -6,7 +6,7 @@
     - context:
         type: {{ tmpfile.type }}
         path: {{ tmpfile.path }}
-        mode: "{{ tmpfile.mode or '-' }}"
+        filemode: "{{ tmpfile.mode or '-' }}"
         uid: "{{ tmpfile.uid or '-' }}"
         gid: "{{ tmpfile.gid or '-' }}"
         age: "{{ tmpfile.age or '-' }}"
