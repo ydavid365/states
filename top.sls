@@ -1,8 +1,7 @@
 base:
-# TODO: - move core, users to *
-#  '*':
-#    - core
-#    - users
+  '*':
+    - core
+    - users
   'sodium.uggedal.com':
     - core
     - users
@@ -26,15 +25,13 @@ base:
 #    - uwsgi.services
 #    - redis
 #    - postgresql.databases
-#  'aluminium.uggedal.com':
-#    - pacman.no
-#    - zsh
-#    - acpid
-#    - xorg.nvidia
-#    - netcfg.profiles
+  'aluminium.uggedal.com':
+    - pacman.no
+    - zsh
+    - acpid
+    - xorg.nvidia
+    - netcfg.profiles
   'silicon.uggedal.com':
-    - core
-    - users
     - pacman.no
     - zsh
     - acpid
