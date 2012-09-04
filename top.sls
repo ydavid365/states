@@ -31,7 +31,6 @@ base:
 #    - zsh
 #    - acpid
 #    - xorg.nvidia
-#    - development
 #    - netcfg.profiles
   'silicon.uggedal.com':
     - core
