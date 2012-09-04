@@ -10,4 +10,7 @@ xorgpkgs:
 fonts:
   pkg.installed:
     - names:
+      - terminus-font
       - ttf-dejavu
+      - ttf-gentium
+      - ttf-ms-win8
