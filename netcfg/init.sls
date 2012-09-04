@@ -17,3 +17,9 @@ netcfg-service-override:
     - name: /etc/systemd/system/netcfg.service
     - source: salt://netcfg/netcfg.service.jinja
     - template: jinja
+
+netcfg-wireless-deps:
+  pkg.installed:
+    - names:
+      - wireless_tools
+      - wpa_supplicant
