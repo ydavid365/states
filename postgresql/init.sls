@@ -14,5 +14,21 @@ postgresql:
       - pkg: postgresql
   service.running:
     - enable: True
+    - provider: systemd
     - watch:
       - file: postgresql
+    - require:
+      - file: /usr/lib/systemd/system/postgresql.service
+      - file: /usr/lib/systemd/scripts/postgresql-initdb
+
+# TODO: Remove when new upstream package is released:
+/usr/lib/systemd/system/postgresql.service:
+  file.managed:
+    - source: salt://postgresql/postgresql.service
+    - mode: 644
+
+# TODO: Remove when new upstream package is released:
+/usr/lib/systemd/scripts/postgresql-initdb:
+  file.managed:
+    - source: salt://postgresql/postgresql-initdb
+    - mode: 755
