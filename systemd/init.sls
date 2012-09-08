@@ -58,3 +58,6 @@ locale-gen:
   cmd.wait:
     - watch:
       - file: /etc/locale.gen
+
+/var/log/journal:
+  file.directory
