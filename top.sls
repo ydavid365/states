@@ -3,8 +3,6 @@ base:
     - core
     - users
   'sodium.uggedal.com':
-    - core
-    - users
     - dhcp
     - pacman.uk
     - server
@@ -16,15 +14,16 @@ base:
     - nginx.sites
     - uwsgi.services
     - redis
-    #- postgresql.databases
-#  'magnesium.uggedal.com':
-#    - pacman.uk
-#    - server
-#    - tarsnap.backup
-#    - nginx.sites
-#    - uwsgi.services
-#    - redis
-#    - postgresql.databases
+    - postgresql.databases
+  'magnesium.uggedal.com':
+    - dhcp
+    - pacman.uk
+    - server
+    - tarsnap.backup
+    - nginx.sites
+    - uwsgi.services
+    - redis
+    - postgresql.databases
   'aluminium.uggedal.com':
     - pacman.no
     - zsh
