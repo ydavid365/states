@@ -2,6 +2,12 @@ uwsgi:
   pkg:
     - installed
 
+/etc/uwsgi:
+  file.directory:
+    - mode: 640
+    - user: http
+    - group: http
+
 /etc/uwsgi/common.ini:
   file.managed:
     - source: salt://uwsgi/common.ini
@@ -10,6 +16,7 @@ uwsgi:
     - group: http
     - require:
       - pkg: uwsgi
+      - file: /etc/uwsgi
 
 /var/log/uwsgi:
   file.directory:
