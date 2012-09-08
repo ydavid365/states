@@ -61,3 +61,7 @@ locale-gen:
 
 /var/log/journal:
   file.directory
+
+/etc/systemd/journald.conf:
+  file.managed:
+    - source: salt://systemd/journald.conf
