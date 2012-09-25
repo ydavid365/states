@@ -18,6 +18,3 @@ postgresql:
     - provider: systemd
     - watch:
       - file: postgresql
-    - require:
-      - file: /usr/lib/systemd/system/postgresql.service
-      - file: /usr/lib/systemd/scripts/postgresql-initdb
