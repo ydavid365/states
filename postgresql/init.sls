@@ -10,6 +10,7 @@ postgresql:
         max_connections: 100
         shared_buffers: 24MB
         effective_cache_size: 128MB
+        timezone: 'Europe/Oslo'
     - require:
       - pkg: postgresql
   service.running:
