@@ -1,7 +1,7 @@
 include:
   - uwsgi
 
-{% for service in pillar["uwsgi_services"] %}
+{% for service in pillar.get('uwsgi_services', []) %}
 
 {{ service.name }}:
   pkg.installed

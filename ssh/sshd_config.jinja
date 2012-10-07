@@ -121,6 +121,6 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 #	AllowTcpForwarding no
 #	ForceCommand cvs server
 
-{% if allowed_users %}
-AllowUsers {{ allowed_users|join(" ") }}
+{% if 'allowed_users' in pillar %}
+AllowUsers {{ pillar.allowed_users|join(" ") }}
 {% endif %}
