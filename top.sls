@@ -3,7 +3,6 @@ base:
     - core
     - users
   'sodium.uggedal.com':
-    - kernel.xen
     - dhcp
     - pacman.uk
     - xen
@@ -17,7 +16,6 @@ base:
     - redis
     - postgresql.databases
   'magnesium.uggedal.com':
-    - kernel.xen
     - dhcp
     - pacman.uk
     - xen
