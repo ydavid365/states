@@ -30,6 +30,7 @@ base:
     - acpid
     - xorg.nvidia
     - netcfg.profiles
+    - netcfg.wireless
   'silicon.uggedal.com':
     - pacman.no
     - zsh
@@ -37,9 +38,11 @@ base:
     - xorg.intel
     - development
     - netcfg.profiles
+    - netcfg.wireless
   'sulfur.uggedal.com':
     - pacman.uk
     - tarsnap.backup
     - nginx.sites
     - uwsgi.services
     - redis
+    - netcfg.profiles

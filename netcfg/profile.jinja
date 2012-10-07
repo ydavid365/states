@@ -1,18 +1,30 @@
-CONNECTION='wireless'
-DESCRIPTION='Wireless connection for {{ name }}'
-INTERFACE='wlan0'
-SECURITY='{{ security }}'
-IP='dhcp'
+{% set profile = pillar["netcfg_profiles"][index] %}
+CONNECTION='{{ profile.get('connection', 'wireless') }}'
+DESCRIPTION='Connection for {{ profile.name }}'
+INTERFACE='{{ profile.get('interface', 'wlan0') }}'
+IP='{{ profile.get('ip', 'dhcp') }}'
+{%- if 'addr' in profile %}
+ADDR='{{ profile.addr }}'
+{%- endif %}
+{%- if 'security' in profile %}
+SECURITY='{{ profile.security }}'
+{%- endif %}
 
-{% if key %}
-ESSID='{{ essid }}'
-KEY='{{ key }}'
-{% else %}
+{%- if 'post_up' in profile %}
+POST_UP='{{ profile.post_up }}'
+{%- endif %}
+
+{% if 'essid' in profile %}
+{%- if 'key' in profile %}
+ESSID='{{ profile.essid }}'
+KEY='{{ profile.key }}'
+{%- else  %}
 CONFIGSECTION='
-    ssid="{{ essid }}"
-    key_mgmt={{ key_mgmt }}
-    eap={{ eap }}
-    anonymous_identity="{{ identity }}"
-    identity="{{ identity }}"
-    password="{{ password }}"'
+    ssid="{{ profile.essid }}"
+    key_mgmt={{ profile.key_mgmt }}
+    eap={{ profile.eap }}
+    anonymous_identity="{{ profile.identity }}"
+    identity="{{ profile.identity }}"
+    password="{{ profile.password }}"'
+{%- endif %}
 {% endif %}
