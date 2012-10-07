@@ -1,14 +1,8 @@
-{% for tmpfile in pillar.tmpfiles %}
+{% for tmpfile in pillar.get('tmpfiles', []) %}
 /etc/tmpfiles.d/{{ tmpfile.name }}.conf:
   file.managed:
     - source: salt://tmpfiles/tmpfile.conf.jinja
     - template: jinja
     - context:
-        type: {{ tmpfile.type }}
-        path: {{ tmpfile.path }}
-        filemode: "{{ tmpfile.mode or '-' }}"
-        uid: "{{ tmpfile.uid or '-' }}"
-        gid: "{{ tmpfile.gid or '-' }}"
-        age: "{{ tmpfile.age or '-' }}"
-        argument: "{{ tmpfile.argument or '-' }}"
+        index: {{ loop.index0 }}
 {% endfor %}

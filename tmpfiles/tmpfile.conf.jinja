@@ -1,1 +1,2 @@
-{{ type }} {{ path }} {{ filemode }}  {{ uid }} {{ gid }} {{ age }} {{ argument }}
+{% set f = pillar["tmpfiles"][index] %}
+{{ f.type }} {{ f.path }} {{ f.get('filemode', '-') }}  {{ f.get('uid', '-') }} {{ f.get('gid', '-') }} {{ f.get('age', '-') }} {{ f.get('argument', '-') }}

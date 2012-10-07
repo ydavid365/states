@@ -1,4 +1,4 @@
-{% for pkg in pillar['extra_packages'] %}
+{% for pkg in pillar.get('extra_packages', []) %}
 {{ pkg }}:
   pkg.installed
 {% endfor %}

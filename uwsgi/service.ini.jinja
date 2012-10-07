@@ -1,21 +1,22 @@
+{% set service = pillar["uwsgi_services"][index] %}
 [uwsgi]
 
 inherit = /etc/uwsgi/common.ini
-{% if chdir %}
-chdir = {{ chdir }}
+{% if 'chdir' in service %}
+chdir = {{ service.chdir }}
 {% endif %}
-{% if django %}
-env = DJANGO_SETTINGS_MODULE={{ module }}.settings
+{% if 'django' in service %}
+env = DJANGO_SETTINGS_MODULE={{ service.module }}.settings
 module = django.core.handlers.wsgi:WSGIHandler()
 {% else %}
-module = {{ module }}
+module = {{ service.module }}
 {% endif %}
-processes = {{ processes }}
-{% if idle %}
+processes = {{ service.get('processes', 2) }}
+{% if 'idle' in service %}
 idle = 60
 {% endif %}
 socket = /run/uwsgi/%n.sock
-{% if not global %}
+{% if not 'global' in service %}
 virtualenv = /usr/local/venv/%n
 {% endif %}
 procname-prefix-spaced = %n:

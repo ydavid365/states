@@ -1,35 +1,36 @@
-{% if aliases %}
+{% set site = pillar["nginx_sites"][index] %}
+{% if 'aliases' in site %}
 server {
-  server_name {{ aliases|join(" ") }};
-  rewrite ^ http://{{ fqdn }}$request_uri? permanent;
+  server_name {{ site.aliases|join(" ") }};
+  rewrite ^ http://{{ site.fqdn }}$request_uri? permanent;
 }
 {% endif %}
-{% if subdomain_to_path_alias %}
+{% if 'subdomain_to_path_alias' in site %}
 server {
-  server_name {{ subdomain_to_path_alias }};
-  rewrite ^ http://{{ fqdn }}/{{ subdomain_to_path_alias.split('.', 1)[0] }}$request_uri? permanent;
+  server_name {{ site.subdomain_to_path_alias }};
+  rewrite ^ http://{{ site.fqdn }}/{{ site.subdomain_to_path_alias.split('.', 1)[0] }}$request_uri? permanent;
 }
 {% endif %}
 
-{%- set upstream_name = fqdn|replace(".", "-") ~ "-backend" %}
-{%- if upstreams %}
+{%- set upstream_name = site.fqdn|replace(".", "-") ~ "-backend" %}
+{%- if 'upstreams' in site %}
 upstream {{ upstream_name }} {
-  {%- for upstream in upstreams %}
+  {%- for upstream in site.upstreams %}
   server {{ upstream }} fail_timeout=0;
   {%- endfor %}
 }
 {%- endif %}
 
 server {
-  {%- if default %}
+  {%- if 'default' in site %}
   listen 80 default_server deferred;
   {%- endif %}
-  server_name {{ fqdn }};
+  server_name {{ site.fqdn }};
   client_max_body_size 10m;
 
-  root {{ root }};
+  root {{ site.root }};
 
-  access_log  /var/log/nginx/{{ fqdn }}.access.log;
+  access_log  /var/log/nginx/{{ site.fqdn }}.access.log;
 
   keepalive_timeout 5;
 
@@ -38,8 +39,8 @@ server {
     log_not_found off;
   }
 
-  {%- if static_prefix %}
-  location {{ static_prefix }} {
+  {%- if 'static_prefix' in site %}
+  location {{ site.static_prefix }} {
     expires max;
     access_log off;
   }
@@ -51,23 +52,20 @@ server {
   }
 
   location / {
-    {%- if upstreams %}
+    {%- if 'upstreams' in site %}
     try_files $uri @{{ upstream_name }};
     {%- else %}
     index  index.html;
-    {%- if autoindex %}
+    {%- if 'autoindex' in site %}
     autoindex on;
     autoindex_exact_size off;
-    {%- endif %}
-    {%- if append_html_to_path %}
-    try_files $uri $uri/ $uri.html =404;
     {%- endif %}
   {%- endif %}
 
   }
-  {%- if upstreams %}
+  {%- if 'upstreams' in site %}
   location @{{ upstream_name }}  {
-    {%- if uwsgi %}
+    {%- if 'uwsgi' in site %}
     include uwsgi_params;
     uwsgi_pass {{ upstream_name }};
     {%- else %}

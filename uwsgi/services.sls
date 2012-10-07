@@ -24,12 +24,7 @@ include:
     - user: http
     - group: http
     - defaults:
-        chdir: {{ service.chdir or False }}
-        django: {{ service.django or False }}
-        module: {{ service.module }}
-        processes: {{ service.processes or 2 }}
-        idle: {{ service.idle or False }}
-        global: {{ service.global or False }}
+        index: {{ loop.index0 }}
     - require:
       - pkg: {{ service.name }}
       - file: /etc/uwsgi/common.ini
