@@ -5,6 +5,6 @@ grub:
 
 /boot/grub/menu.lst:
   file.managed:
-    - source: salt://grub/menu.lst
+    - source: salt://xen/grub/menu.lst
     - require:
       - pkg: grub

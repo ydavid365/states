@@ -3,9 +3,10 @@ base:
     - core
     - users
   'sodium.uggedal.com':
+    - kernel.xen
     - dhcp
     - pacman.uk
-    - server
+    - xen
     - salt.master
     - zsh
     - sic
@@ -16,9 +17,10 @@ base:
     - redis
     - postgresql.databases
   'magnesium.uggedal.com':
+    - kernel.xen
     - dhcp
     - pacman.uk
-    - server
+    - xen
     - tarsnap.backup
     - nginx.sites
     - uwsgi.services
@@ -37,3 +39,9 @@ base:
     - xorg.intel
     - development
     - netcfg.profiles
+  'sulfur.uggedal.com':
+    - pacman.uk
+    - tarsnap.backup
+    - nginx.sites
+    - uwsgi.services
+    - redis

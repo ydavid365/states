@@ -1,11 +1,11 @@
 include:
-  - kernel
+  - kernel.lts
 
 /etc/mkinitcpio.conf:
   file.managed:
-    - source: salt://kernel/mkinitcpio.xen.conf
+    - source: salt://xen/kernel/mkinitcpio.xen.conf
     - require:
-      - pkg: kernel
+      - pkg: kernel-lts
 
 mkinitcpio:
   cmd.wait:
