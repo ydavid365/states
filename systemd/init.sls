@@ -65,3 +65,7 @@ locale-gen:
 /etc/systemd/journald.conf:
   file.managed:
     - source: salt://systemd/journald.conf
+
+/etc/systemd/logind.conf:
+  file.managed:
+    - source: salt://systemd/logind.conf
