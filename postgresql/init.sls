@@ -4,6 +4,7 @@ postgresql:
   file.managed:
     - name: /var/lib/postgres/data/postgresql.conf
     - source: salt://postgresql/postgresql.conf.jinja
+    - mode: 644
     - template: jinja
     - defaults:
         listen_addresses: 127.0.0.1
