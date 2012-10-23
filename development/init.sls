@@ -6,7 +6,7 @@ devpkgs:
       - git
       - gti-git
       - mercurial
-      - ack
+      - silver-searcher-git
       - inotify-tools
       - cloc
       - gettext
