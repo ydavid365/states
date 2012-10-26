@@ -6,3 +6,7 @@ cronie:
     - provider: systemd
     - require:
       - pkg: cronie
+
+/etc/anacrontab:
+  file.managed:
+    - source: salt://cron/anacrontab
