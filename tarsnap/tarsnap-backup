@@ -20,3 +20,5 @@ done
 OUT=$(find $TMP -type f)
 
 tarsnap -c -f "$NAME" $OUT "${PATHS[@]}" > /dev/null 2>&1
+
+test -n "$PING" && curl "$PING" &> /dev/null

@@ -8,6 +8,7 @@ include:
     - defaults:
         cmds: {{ pillar.get('tarsnap_backup_cmds', []) }}
         paths: {{ pillar.get('tarsnap_backup_paths', []) }}
+        ping: {{ pillar.get('tarsnap_backup_ping', '') }}
     - require:
       - pkg: tarsnap
 
