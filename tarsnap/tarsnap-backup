@@ -2,6 +2,8 @@
 
 set -e
 
+start="$(date '+%s')"
+
 . /etc/tarsnap/backup.conf
 
 NAME="$(hostname)_$(date -u +%s)"
@@ -21,4 +23,7 @@ OUT=$(find $TMP -type f)
 
 tarsnap -c -f "$NAME" $OUT "${PATHS[@]}" > /dev/null 2>&1
 
-test -n "$PING" && curl "$PING" &> /dev/null
+end="$(date '+%s')"
+msg="$(expr $end - $start)s"
+
+test -n "$PING" && curl -d "m=$msg" "$PING" &> /dev/null
