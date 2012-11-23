@@ -5,7 +5,6 @@ nginx-rc:
   service.running:
     - name: nginx
     - enable: True
-    - provider: systemd
     - watch:
       - file: /etc/nginx/nginx.conf
       - file: /etc/nginx/mime.types

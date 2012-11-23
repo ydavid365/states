@@ -11,7 +11,6 @@ include:
 salt-master:
   service.running:
     - enabled: True
-    - provider: systemd
     - watch:
       - file: /etc/salt/master
     - require:

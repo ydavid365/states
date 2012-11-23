@@ -4,7 +4,6 @@ openssh:
 sshd.socket:
   service.running:
     - enable: True
-    - provider: systemd
     - watch:
       - file: /etc/ssh/sshd_config
 

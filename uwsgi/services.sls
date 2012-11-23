@@ -9,7 +9,6 @@ include:
 "uwsgi@{{ service.name }}":
   service.running:
     - enable: True
-    - provider: systemd
     - watch:
       - file: /etc/uwsgi/common.ini
       - file: /etc/uwsgi/{{ service.name }}.ini

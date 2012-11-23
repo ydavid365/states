@@ -16,6 +16,5 @@ postgresql:
       - pkg: postgresql
   service.running:
     - enable: True
-    - provider: systemd
     - watch:
       - file: postgresql

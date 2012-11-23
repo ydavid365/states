@@ -2,12 +2,10 @@ dhcpcd:
   pkg.installed
 
 "dhcpcd@":
-  service.enabled:
-    - provider: systemd
+  service.enabled
 
 "dhcpcd@eth0":
   service.running:
-    - provider: systemd
     - require:
       - service: "dhcpcd@"
 

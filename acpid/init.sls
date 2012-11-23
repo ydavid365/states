@@ -9,6 +9,5 @@ acpid:
       - pkg: acpid
   service.running:
     - enable: True
-    - provider: systemd
     - require:
       - pkg: acpid

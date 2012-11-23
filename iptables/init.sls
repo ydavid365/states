@@ -2,7 +2,6 @@ iptables:
   pkg:
     - installed
   service.enabled:
-    - provider: systemd
     - require:
       - pkg: iptables
 

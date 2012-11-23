@@ -7,7 +7,6 @@ netcfg:
     - template: jinja
   service.running:
     - enable: True
-    - provider: systemd
     - require:
       - file: netcfg
       - file: netcfg-service-override
