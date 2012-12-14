@@ -4,6 +4,8 @@ iptables:
   service.enabled:
     - require:
       - pkg: iptables
+    - watch:
+      - file: /etc/iptables/iptables.rules
 
 /etc/iptables/iptables.rules:
   file.managed:
@@ -15,8 +17,3 @@ iptables:
         limit_tcp_ports: {{ pillar.get('limit_tcp_ports', [22]) }}
     - require:
       - pkg: iptables
-
-iptables-restore < /etc/iptables/iptables.rules:
-  cmd.wait:
-    - watch:
-      - file: /etc/iptables/iptables.rules

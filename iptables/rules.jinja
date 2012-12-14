@@ -14,19 +14,19 @@
 -A INPUT -p tcp -j REJECT --reject-with tcp-rst
 -A INPUT -j REJECT --reject-with icmp-proto-unreachable
 
-{% if accept_tcp_ports|length > 0 %}
+{%- if accept_tcp_ports|length > 0 %}
 -A TCP -p tcp -m multiport --dports {{ accept_tcp_ports|join(",") }} -j ACCEPT
-{% endif %}
+{%- endif %}
 
-{% for from in accept_tcp_from %}
-{% for source in from.source %}
+{%- for from in accept_tcp_from %}
+{%- for source in from.source %}
 -A TCP -p tcp --dport {{ from.port }} -s {{ source }} -j ACCEPT
-{% endfor %}
-{% endfor %}
+{%- endfor %}
+{%- endfor %}
 
-{% for port in limit_tcp_ports %}
+{%- for port in limit_tcp_ports %}
 -A TCP -p tcp --dport {{ port }} -m recent --update --name limit-tcp-{{ port}} --hitcount 3 --seconds 30 -j REJECT --reject-with icmp-port-unreachable
 -A TCP -p tcp --dport {{ port }} -m recent --set --name limit-tcp-{{ port}} -j ACCEPT
-{% endfor %}
-
+{%- endfor %}
 COMMIT
+{# Enforce newline #}
