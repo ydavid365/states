@@ -19,7 +19,7 @@ corepkgs:
       - inetutils
       - htop
       - lsof
-      - ps_mem
+      - psm
 
 unneededpkgs:
   pkg.purged:
